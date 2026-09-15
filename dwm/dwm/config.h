@@ -63,12 +63,15 @@ static const char *termcmd[]  = { "st", "-f", "monospace:size=16", NULL };
 static const char *filemanager[]  = { "pcmanfm", NULL };
 static const char *termfilemanager[]  = { "st", "-f", "monospace:size=16", "-e", "nnn", NULL };
 static const char *texteditor[]  = { "st", "-f", "monospace:size=16", "-e", "nvim", NULL };
+static const char *browser[]  = {"firefox", NULL};
+/* Suckless st browser 
 static const char *browser[]  = {
     "sh", "-c",
-    "query=$(printf '' | dmenu -p 'Search: ') && "
+    "query=$(printf '' | dmenu -fn monospace:size=12 -p 'Search: ') && "
     "surf \"https://www.startpage.com/do/dsearch?query=$(printf '%s' \"$query\" | sed 's/ /+/g')\"",
     NULL
 };
+*/
 static const char *screenshot[]  = { "xfce4-screenshooter", NULL };
 static const char *locker[]  = { "slock", NULL };
 /* Audio & Brightness
