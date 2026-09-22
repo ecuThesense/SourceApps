@@ -5,7 +5,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "monospace:size=14" };
-static const char dmenufont[]       = "monospace:size=12";
+static const char dmenufont[]       = "monospace:size=14";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#505050";
 static const char col_gray3[]       = "#bbbbbb";
@@ -39,9 +39,9 @@ static const int refreshrate = 120;  /* refresh rate (per second) for client mov
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "󱓼",      tile },    /* first entry is default */
-	{ "󱂬",      NULL },    /* no layout function means floating behavior */
-	{ "",      monocle },
+	{ "[T]",      tile },    /* first entry is default */
+	{ "[F]",      NULL },    /* no layout function means floating behavior */
+	{ "[M]",      monocle },
 };
 
 /* key definitions */
@@ -60,18 +60,16 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 /* Apps */
 static const char *termcmd[]  = { "st", "-f", "monospace:size=16", NULL };
-static const char *filemanager[]  = { "pcmanfm", NULL };
+/* static const char *filemanager[]  = { "pcmanfm", NULL }; */
 static const char *termfilemanager[]  = { "st", "-f", "monospace:size=16", "-e", "nnn", NULL };
 static const char *texteditor[]  = { "st", "-f", "monospace:size=16", "-e", "nvim", NULL };
-static const char *browser[]  = {"firefox", NULL};
-/* Suckless st browser 
+/* static const char *browser[]  = {"firefox", NULL}; */
 static const char *browser[]  = {
     "sh", "-c",
-    "query=$(printf '' | dmenu -fn monospace:size=12 -p 'Search: ') && "
+    "query=$(printf '' | dmenu -fn monospace:size=14 -p 'Search: ') && "
     "surf \"https://www.startpage.com/do/dsearch?query=$(printf '%s' \"$query\" | sed 's/ /+/g')\"",
     NULL
 };
-*/
 static const char *screenshot[]  = { "xfce4-screenshooter", NULL };
 static const char *locker[]  = { "slock", NULL };
 /* Audio & Brightness
@@ -94,7 +92,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,               spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_b,               togglebar,      {0} },
 	{ MODKEY,                       XK_e,               spawn,          {.v = termfilemanager } },
-	{ MODKEY|ShiftMask,             XK_e,               spawn,          {.v = filemanager } },
+	{ MODKEY|ShiftMask,             XK_e,               spawn,          SHCMD("st -f monospace:size=16 -e ./SourceApps/dwm/dwm/search.sh")},
 	{ MODKEY,                       XK_m,               spawn,          {.v = texteditor } },
 	{ MODKEY,                       XK_b,               spawn,          {.v = browser } },
 	{ MODKEY,                       XK_s,               spawn,          {.v = screenshot } },
