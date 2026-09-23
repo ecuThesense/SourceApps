@@ -7,7 +7,7 @@ bm="$HOME/.surf/bookmarks.html"
 pairs=$(sed -n 's/.*<A HREF="\([^"]*\)"[^>]*>\(.*\)<\/A>.*/\1\t\2/p' "$bm")
 [ -z "$pairs" ] && exit 1
 
-sel=$(printf '%s\n' "$pairs" | cut -f2 | sort | dmenu -w "$1" -l 10 -p 'Bookmark:')
+sel=$(printf '%s\n' "$pairs" | cut -f2 | sort -f | dmenu -w "$1" -i -l 10 -p 'Bookmark:')
 [ -z "$sel" ] && exit 0
 
 eurl=$(printf '%s\n' "$pairs" | awk -F'\t' -v t="$sel" '$2==t{print $1; exit}')
