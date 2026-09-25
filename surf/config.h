@@ -131,8 +131,8 @@ static SiteSpecific certs[] = {
 static Key keys[] = {
 	/* modifier              keyval          function    arg */
 	{ MODKEY,                GDK_KEY_g,      spawn,      SETPROP("_SURF_URI", "_SURF_GO", PROMPT_GO) },
-    { MODKEY,                GDK_KEY_b,      spawn,      { .v = (const char *[]){ "/bin/sh", "-c", "\"$HOME/SourceApps/dwm/dwm/scripts/surf-bm-open\" \"$1\"", "x", winid, NULL } } },
-    { MODKEY|GDK_SHIFT_MASK, GDK_KEY_b,      spawn,      { .v = (const char *[]){ "/bin/sh", "-c", "\"$HOME/SourceApps/dwm/dwm/scripts/surf-bm-add\" \"$1\"", "x", winid, NULL } } },	{ MODKEY,                GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
+    { MODKEY,                GDK_KEY_b,      spawn,      { .v = (const char *[]){ "/bin/sh", "-c", "\"$HOME/SourceApps/dwm/scripts/surf-bm-open\" \"$1\"", "x", winid, NULL } } },
+    { MODKEY|GDK_SHIFT_MASK, GDK_KEY_b,      spawn,      { .v = (const char *[]){ "/bin/sh", "-c", "\"$HOME/SourceApps/dwm/scripts/surf-bm-add\" \"$1\"", "x", winid, NULL } } },	{ MODKEY,                GDK_KEY_f,      spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
 	{ MODKEY,                GDK_KEY_slash,  spawn,      SETPROP("_SURF_FIND", "_SURF_FIND", PROMPT_FIND) },
 
 	{ 0,                     GDK_KEY_Escape, stop,       { 0 } },
