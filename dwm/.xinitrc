@@ -1,7 +1,4 @@
-~/dwm/dwm/scripts/statusbar.sh &
-statusbar_pid=$!
-xwallpaper --zoom ~/Pictures/wallhaven.png &
-trap "kill $statusbar_pid" EXIT
-
+xwallpaper --zoom ~/SourceApps/dwm/Wallpapers/wallhaven.png &
+slstatus &
+lxpolkit &
 dwm
-kill $statusbar_pid 2>/dev/null
