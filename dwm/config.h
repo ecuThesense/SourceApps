@@ -93,6 +93,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_b,               togglebar,      {0} },
 	{ MODKEY,                       XK_e,               spawn,          {.v = termfilemanager } },
 	{ MODKEY|ShiftMask,             XK_e,               spawn,          SHCMD("st -f monospace:size=16 -e ./SourceApps/dwm/dwm/search.sh")},
+	{ MODKEY,                       XK_i,               spawn,          SHCMD("./SourceApps/dmenuman/dmenuman.sh")},
 	{ MODKEY,                       XK_m,               spawn,          {.v = texteditor } },
 	{ MODKEY,                       XK_b,               spawn,          {.v = browser } },
 	{ MODKEY,                       XK_s,               spawn,          {.v = screenshot } },
