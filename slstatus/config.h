@@ -66,6 +66,7 @@ static const char unknown_str[] = "n/a";
  */
 static const struct arg args[] = {
 	/* function     format          argument */
+	{ keymap,       " %s |",        NULL },
 	{ run_command,  " VOL %s%% |",  "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{printf \"%.0f\", $2 * 100}'" },
 	{ ram_used,     " RAM %s |",    NULL },
 	{ disk_free,    " DISK %s |",   "/" },
