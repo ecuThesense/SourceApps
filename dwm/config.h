@@ -63,12 +63,15 @@ static const char *termcmd[]  = { "st", "-f", "monospace:size=16", NULL };
 static const char *termfilemanager[]  = { "st", "-f", "monospace:size=16", "-e", "nnn", NULL };
 static const char *texteditor[]  = { "st", "-f", "monospace:size=16", "-e", "nvim", NULL };
 /* static const char *browser[]  = {"firefox", NULL}; */
+/*
 static const char *browser[]  = {
     "sh", "-c",
     "query=$(printf '' | dmenu -fn monospace:size=14 -p 'Search: ') && "
     "surf \"https://www.startpage.com/do/dsearch?query=$(printf '%s' \"$query\" | sed 's/ /+/g')\"",
     NULL
 };
+*/
+static const char *browser[]  = {"./SourceApps/dwm/scripts/surf-launch.sh", NULL};
 static const char *locker[]  = { "slock", NULL };
 /* Audio & Brightness
 static const char *audiomute[]  = { "wpctl", "set-mute", "@DEFAULT_AUDIO_SINK@", "toggle", "&&", "~/dwm/dwm/scripts/statusbar.sh", "--once", NULL };
