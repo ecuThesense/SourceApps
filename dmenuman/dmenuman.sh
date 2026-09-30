@@ -1,6 +1,6 @@
 #!/bin/sh
 # manmenu.sh - search man pages with dmenu, or pick a random one
-RANDOMPAGE="$HOME/dmenuman/randommanpage.sh"   # adjust path
+RANDOMPAGE="$HOME/SourceApps/dmenuman/randommanpage.sh"   # adjust path
 TERM_CMD="${TERMINAL:-st -f monospace:size=16}"         # your terminal emulator
 RANDOM_ENTRY="[ Random page ]"
 
