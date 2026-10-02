@@ -33,4 +33,4 @@ if [ -z "$url" ]; then
     esac
 fi
 
-exec surf "$url"
+exec surf -z 1.5 "$url"
