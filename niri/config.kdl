@@ -167,9 +167,15 @@ window-rule {
     default-column-width {}
 }
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id=r#"firefox-esr$"# title="^Picture-in-Picture$"
     open-maximized true
 }
+
+window-rule {
+    match app-id="firefox-esr$"
+    open-maximized true
+}
+
 /-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
