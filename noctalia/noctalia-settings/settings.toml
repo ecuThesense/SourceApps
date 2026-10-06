@@ -1,0 +1,304 @@
+config_version = 15
+
+[backdrop]
+blur_intensity = 0.11999999731779099
+
+[bar.default]
+background_opacity = 0.84999998100101948
+border = "primary"
+center = [ "clock", "media" ]
+color = "primary"
+end = [
+    "keyboard_layout",
+    "tray",
+    "clipboard",
+    "sysmon",
+    "network",
+    "bluetooth",
+    "volume",
+    "brightness",
+    "battery",
+    "control-center",
+    "session",
+    "notifications"
+]
+font_scale = 1.1499999817460775
+font_weight = 700
+icon_color = "primary"
+scale = 1.2000000104308128
+start = [ "launcher", "wallpaper", "workspaces", "taskbar" ]
+widget_spacing = 10
+
+[control_center.calendar]
+show_events_card = false
+
+[[control_center.shortcuts]]
+type = "clipboard"
+
+[[control_center.shortcuts]]
+type = "wifi"
+
+[[control_center.shortcuts]]
+type = "bluetooth"
+
+[[control_center.shortcuts]]
+type = "power_profile"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [
+    "lockscreen-login-box@eDP-1",
+    "lockscreen-login-box@DP-3",
+    "lockscreen-login-box@DP-4",
+    "lockscreen-login-box@DP-5"
+]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-3"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-3"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-3".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-4"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-4"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-4".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-5"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "DP-5"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-5".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[nightlight]
+temperature_day = 8500
+temperature_night = 8500
+
+[plugins]
+auto_update = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    enabled = false
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+corner_radius_scale = 2.0
+font_family = "DejaVu Sans Mono"
+niri_overview_type_to_launch_enabled = true
+
+    [shell.panel]
+    clipboard_placement = "attached"
+    open_near_click_clipboard = true
+    open_near_click_session = true
+
+[theme]
+builtin = "Tokyo-Night"
+community_palette = "Oxocarbon"
+custom_palette = "wallhaven-mc"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "alacritty", "gtk3", "gtk4", "niri" ]
+    enable_community_templates = false
+
+[wallpaper]
+fill_color = "primary"
+
+    [wallpaper.default]
+    path = "/home/pavel/Pictures/wallhaven.png"
+
+    [wallpaper.last]
+    path = "/home/pavel/Pictures/wallhaven.png"
+
+    [wallpaper.monitor.DP-3]
+    fill_color = "primary"
+
+    [wallpaper.monitor.DP-4]
+    fill_color = "primary"
+
+    [wallpaper.monitor.DP-5]
+    fill_color = "primary"
+
+    [wallpaper.monitor.eDP-1]
+    fill_color = "primary"
+
+    [wallpaper.monitors.DP-3]
+    path = "/home/pavel/Pictures/wallhaven.png"
+
+    [wallpaper.monitors.DP-4]
+    path = "/home/pavel/Pictures/wallhaven.png"
+
+    [wallpaper.monitors.DP-5]
+    path = "/home/pavel/Pictures/wallhaven.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/pavel/Pictures/wallhaven.png"
+
+    [[wallpaper.favorite]]
+    palette_source = "wallpaper"
+    path = "/home/pavel/Pictures/wallhaven.png"
+    theme_mode = "dark"
+    wallpaper_scheme = "m3-content"
+
+[weather]
+enabled = false
+
+[widget.active_window]
+display = "icon_only"
+min_length = 0
+
+[widget.control-center]
+enabled = false
+
+[widget.keyboard_layout]
+show_glyph = false
+
+[widget.media]
+art_size = 26
+color = "primary"
+hide_when_no_media = true
+icon_color = "primary"
+min_length = 0
+show_progress = true
+
+[widget.session]
+enabled = false
+
+[widget.sysmon]
+stat = "ram_used"
+visualization = "none"
