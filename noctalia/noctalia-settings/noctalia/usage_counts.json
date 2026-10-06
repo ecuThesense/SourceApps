@@ -1,0 +1,21 @@
+{
+  "Applications": {
+    "/usr/share/applications/Alacritty.desktop": 1,
+    "/usr/share/applications/firefox-esr.desktop": 4,
+    "/usr/share/applications/fluid.desktop": 1,
+    "/usr/share/applications/foot.desktop": 7,
+    "/usr/share/applications/kitty.desktop": 3
+  },
+  "Emoji": {
+    "emoji-😆": 1
+  },
+  "Panels": {
+    "cc-tab:network": 1
+  },
+  "Wallpaper": {
+    "/home/pavel/Pictures/blue-abstract-3840x2160-25121.jpg": 1,
+    "/home/pavel/Pictures/debian13.png": 1,
+    "/home/pavel/Pictures/golden-stripes-neon-3840x2160-25123.jpg": 1,
+    "/home/pavel/Pictures/wallhaven.png": 2
+  }
+}

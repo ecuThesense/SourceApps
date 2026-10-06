@@ -207,7 +207,7 @@ debug {
 
 binds {
     Mod+P { show-hotkey-overlay; }
-    Mod+T hotkey-overlay-title="Open a Terminal: Alacritty"                { spawn "alacritty"; }
+    Mod+T hotkey-overlay-title="Open a Terminal"                           { spawn "foot"; }
     Mod+F hotkey-overlay-title="Run an Applications"                       { spawn-sh "noctalia msg panel-toggle launcher"; }
 //    Mod+Shift+U hotkey-overlay-title="Lock the Screen: hyprlock"         { spawn "hyprlock"; }
 //    Mod+O hotkey-overlay-title="Run an Application: Localsend"           { spawn "localsend_app"; }
@@ -215,8 +215,8 @@ binds {
    Mod+I hotkey-overlay-title="Run an Application: ManPages"               { spawn-sh "~/SourceApps/noctalia/noctalia-manmenu.sh"; }
    Mod+U hotkey-overlay-title="Lock Screen"                                { spawn-sh "noctalia msg session lock"; }
 //    Mod+A hotkey-overlay-title="Run an Application: Hyprpicker"          { spawn "hyprpicker" "-a"; }
-   Mod+E hotkey-overlay-title="Run an Application: File Manager Terminal"  { spawn "alacritty" "-e" "nnn"; }
-   Mod+M hotkey-overlay-title="Run an Application: Text Editor"            { spawn "alacritty" "-e" "nvim"; }
+   Mod+E hotkey-overlay-title="Run an Application: File Manager Terminal"  { spawn "foot" "-e" "yazi"; }
+   Mod+M hotkey-overlay-title="Run an Application: Text Editor"            { spawn "foot" "-e" "nvim"; }
 //    Mod+Shift+E hotkey-overlay-title="Run an Application: File Manager"  { spawn "nautilus" "--new-window"; }
 //    Mod+Shift+B hotkey-overlay-title="Restart an Application: Waybar"    { spawn-sh "pkill waybar; pkill kded6; waybar &"; }
     XF86AudioRaiseVolume allow-when-locked=true  { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+ -l 1.0"; }
