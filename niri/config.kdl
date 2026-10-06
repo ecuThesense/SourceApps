@@ -205,7 +205,8 @@ binds {
     Mod+F hotkey-overlay-title="Run an Applications"                       { spawn-sh "noctalia msg panel-toggle launcher"; }
 //    Mod+Shift+U hotkey-overlay-title="Lock the Screen: hyprlock"         { spawn "hyprlock"; }
 //    Mod+O hotkey-overlay-title="Run an Application: Localsend"           { spawn "localsend_app"; }
-   Mod+B hotkey-overlay-title="Run an Application: Firefox"                { spawn-sh "~/SourceApps/noctalia-browser-launch.sh"; }
+   Mod+B hotkey-overlay-title="Run an Application: Firefox"                { spawn-sh "~/SourceApps/noctalia/noctalia-browser-launch.sh"; }
+   Mod+I hotkey-overlay-title="Run an Application: ManPages"               { spawn-sh "~/SourceApps/noctalia/noctalia-manmenu.sh"; }
 //    Mod+A hotkey-overlay-title="Run an Application: Hyprpicker"          { spawn "hyprpicker" "-a"; }
     Mod+E hotkey-overlay-title="Run an Application: File Manager Terminal" { spawn "alacritty" "-e" "nnn"; }
     Mod+M hotkey-overlay-title="Run an Application: Text Editor"           { spawn "alacritty" "-e" "nvim"; }
