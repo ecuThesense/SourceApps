@@ -26,7 +26,7 @@ font_scale = 1.1499999817460775
 font_weight = 700
 icon_color = "primary"
 scale = 1.2000000104308128
-start = [ "launcher", "wallpaper", "workspaces", "taskbar" ]
+start = [ "workspaces", "taskbar" ]
 widget_spacing = 10
 
 [control_center.calendar]
@@ -74,13 +74,15 @@ behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
     timeout = 660.0
 
 [lockscreen_widgets]
-enabled = false
+enabled = true
 schema_version = 2
 widget_order = [
     "lockscreen-login-box@eDP-1",
     "lockscreen-login-box@DP-3",
     "lockscreen-login-box@DP-4",
-    "lockscreen-login-box@DP-5"
+    "lockscreen-login-box@DP-5",
+    "lockscreen-widget-0000000000000001",
+    "lockscreen-widget-0000000000000002"
 ]
 
     [lockscreen_widgets.grid]
@@ -171,9 +173,9 @@ widget_order = [
 
     [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
     box_height = 196.0
-    box_width = 810.0
+    box_width = 720.0
     cx = 960.0
-    cy = 898.0
+    cy = 890.0
     output = "eDP-1"
     placement_height = 1080.0
     placement_width = 1920.0
@@ -195,6 +197,38 @@ widget_order = [
         show_session_buttons = true
         show_unlock_hint = true
         show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 176.0
+    box_width = 416.0
+    cx = 960.0
+    cy = 212.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background_color = "surface"
+        background_opacity = 0.0
+        clock_style = "digital"
+        color = "primary"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 432.0
+    box_width = 384.0
+    cx = 960.0
+    cy = 508.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "calendar"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = true
+        show_events = false
 
 [nightlight]
 temperature_day = 8500
@@ -222,28 +256,36 @@ niri_overview_type_to_launch_enabled = true
     [shell.panel]
     clipboard_placement = "attached"
     open_near_click_clipboard = true
+    open_near_click_control_center = true
     open_near_click_session = true
+    open_near_click_wallpaper = true
+    polkit_placement = "attached"
 
 [theme]
 builtin = "Tokyo-Night"
 community_palette = "Oxocarbon"
-custom_palette = "wallhaven-mc"
+custom_palette = "fluid-abstract-art-3840x2160-25927-vib"
 mode = "dark"
 source = "wallpaper"
-wallpaper_scheme = "m3-content"
+wallpaper_scheme = "vibrant"
 
     [theme.templates]
-    builtin_ids = [ "alacritty", "gtk3", "gtk4", "niri" ]
+    builtin_ids = [ "foot", "gtk3", "gtk4", "kcolorscheme", "niri", "qt" ]
     enable_community_templates = false
 
 [wallpaper]
+directory = "/home/pavel/Pictures/Wallpapers/"
 fill_color = "primary"
 
+    [wallpaper.automation]
+    enabled = true
+    interval_seconds = 9000
+
     [wallpaper.default]
-    path = "/home/pavel/Pictures/wallhaven.png"
+    path = "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg"
 
     [wallpaper.last]
-    path = "/home/pavel/Pictures/wallhaven.png"
+    path = "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg"
 
     [wallpaper.monitor.DP-3]
     fill_color = "primary"
@@ -258,16 +300,16 @@ fill_color = "primary"
     fill_color = "primary"
 
     [wallpaper.monitors.DP-3]
-    path = "/home/pavel/Pictures/wallhaven.png"
+    path = "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg"
 
     [wallpaper.monitors.DP-4]
-    path = "/home/pavel/Pictures/wallhaven.png"
+    path = "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg"
 
     [wallpaper.monitors.DP-5]
-    path = "/home/pavel/Pictures/wallhaven.png"
+    path = "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg"
 
     [wallpaper.monitors.eDP-1]
-    path = "/home/pavel/Pictures/wallhaven.png"
+    path = "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg"
 
     [[wallpaper.favorite]]
     palette_source = "wallpaper"
@@ -281,6 +323,9 @@ enabled = false
 [widget.active_window]
 display = "icon_only"
 min_length = 0
+
+[widget.clock]
+format = "{:%H:%M %A}"
 
 [widget.control-center]
 enabled = false

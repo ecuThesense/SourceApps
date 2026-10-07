@@ -1,5 +1,31 @@
 {
   "Applications": [
+    "/usr/share/applications/firefox-esr.desktop",
+    "/usr/share/applications/Alacritty.desktop",
+    "/usr/share/applications/debian-uxterm.desktop",
+    "/usr/share/applications/debian-xterm.desktop",
+    "/usr/share/applications/foot.desktop",
+    "/usr/share/applications/kitty.desktop",
     "/usr/share/applications/fluid.desktop"
+  ],
+  "Emoji": [
+    "emoji-😆"
+  ],
+  "Panels": [
+    "cc-tab:network"
+  ],
+  "Wallpaper": [
+    "/home/pavel/Pictures/Wallpapers/fluid-abstract-art-3840x2160-25927.jpg",
+    "/home/pavel/Pictures/Wallpapers/wallhaven.png",
+    "/home/pavel/Pictures/Wallpapers/imac-2023-5k-stock-3840x2160-13250.jpg",
+    "/home/pavel/Pictures/Wallpapers/green-abstract-3840x2160-21891.png",
+    "/home/pavel/Pictures/Wallpapers/debian13.png",
+    "/home/pavel/Pictures/Wallpapers/blue-abstract-3840x2160-25121.jpg",
+    "/home/pavel/Pictures/Wallpapers/gnome.jpg",
+    "/home/pavel/Pictures/geometric-purple-3840x2160-24844.jpg",
+    "/home/pavel/Pictures/blue-abstract-3840x2160-25121.jpg",
+    "/home/pavel/Pictures/golden-stripes-neon-3840x2160-25123.jpg",
+    "/home/pavel/Pictures/wallhaven.png",
+    "/home/pavel/Pictures/debian13.png"
   ]
 }
