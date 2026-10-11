@@ -1,10 +1,10 @@
 dconf dump / > ~/dconf-backup.ini
 # dconf load / < ~/dconf-backup.ini
 dconf reset -f /org/gnome/desktop/interface/
-dconf reset -f /org/gnome/desktop/wm/preferences/
-dconf reset -f /org/gnome/desktop/background/
-dconf reset -f /org/gnome/desktop/screensaver/
-dconf reset -f /org/gnome/shell/extensions/
+#dconf reset -f /org/gnome/desktop/wm/preferences/
+#dconf reset -f /org/gnome/desktop/background/
+#dconf reset -f /org/gnome/desktop/screensaver/
+#dconf reset -f /org/gnome/shell/extensions/
 dconf reset -f /org/gnome/shell/
 dconf reset -f /org/gnome/mutter/
 mkdir ~/appearance-old
