@@ -1,1 +1,1 @@
-doas apt install wofi
+doas apt install fzf
