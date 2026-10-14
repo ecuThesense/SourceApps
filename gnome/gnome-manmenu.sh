@@ -3,7 +3,8 @@
 RANDOMPAGE="$HOME/SourceApps/gnome/gnome-randommanpage.sh"   # adjust path
 RANDOM_ENTRY="[ Random page ]"
 
-choice=$( { echo "$RANDOM_ENTRY"; man -k . | awk '{print $1, $2}'; } | wofi --dmenu -i -p "man:")
+choice=$( { echo "$RANDOM_ENTRY"; man -k . | awk '{print}'; } | wofi --dmenu -i -p "man:")
+# choice=$( { echo "$RANDOM_ENTRY"; man -k . | sed 's/ - .*//; s/,[^(]*(/ (/' | sort -u; } | wofi --dmenu -i -p "man:")
 [ -z "$choice" ] && exit 0
 
 [ "$choice" = "$RANDOM_ENTRY" ] && choice=$("$RANDOMPAGE")
