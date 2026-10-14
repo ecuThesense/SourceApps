@@ -1,7 +1,7 @@
 [/]
 calculator=['<Super>q']
 control-center=['<Control>comma']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/']
 logout=@as []
 magnifier-zoom-in=['<Super>plus']
 magnifier-zoom-out=['<Super>minus']
@@ -36,11 +36,6 @@ binding='<Super>x'
 command='secrets'
 name='Passwords'
 
-[custom-keybindings/custom3]
-binding='<Shift><Super>e'
-command='gnome-terminal --maximize -e ranger'
-name='Launch File Terminal'
-
 [custom-keybindings/custom4]
 binding='<Super>m'
 command='gnome-terminal --maximize -e nvim'
@@ -48,7 +43,7 @@ name='Launch Vim'
 
 [custom-keybindings/custom5]
 binding='<Super>i'
-command='/home/pavel/SourceApps/gnome/gnome-manmenu.sh'
+command='bash -c "$HOME/SourceApps/gnome/gnome-manmenu.sh"'
 name='Manpages'
 
 [custom-keybindings/custom6]
@@ -56,17 +51,12 @@ binding='<Control><Alt>Delete'
 command='gnome-system-monitor'
 name='Resources'
 
-[custom-keybindings/custom7]
-binding='<Super>d'
-command='gnome-disks'
-name='Disks Usage'
-
 [custom-keybindings/custom8]
 binding='<Super>b'
-command='/home/pavel/SourceApps/gnome/gnome-browser-launch.sh'
+command='bash -c "$HOME/SourceApps/gnome/gnome-browser-launch.sh"'
 name='Browser Search'
 
 [custom-keybindings/custom9]
 binding='<Shift><Super>b'
-command='/home/pavel/apps/tor-browser/Browser/start-tor-browser'
+command='bash -c "$HOME/apps/tor-browser/Browser/start-tor-browser"'
 name='Launch Tor'
