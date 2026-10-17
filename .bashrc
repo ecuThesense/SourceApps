@@ -40,6 +40,18 @@ __gnome_accent_rgb() {
     esac
 }
 
+# __apply_accent() {
+#     [[ -t 1 ]] || return
+#     local r g b
+#     read -r r g b <<< "$(__gnome_accent_rgb)"
+#     local lr=$(( r + (255 - r) * 35 / 100 ))
+#     local lg=$(( g + (255 - g) * 35 / 100 ))
+#     local lb=$(( b + (255 - b) * 35 / 100 ))
+#     printf '\e]4;4;rgb:%02x/%02x/%02x\a'  "$r" "$g" "$b"      # slot 4  = accent
+#     printf '\e]4;12;rgb:%02x/%02x/%02x\a' "$lr" "$lg" "$lb"   # slot 12 = lighter accent
+#     printf '\e]12;rgb:%02x/%02x/%02x\a'   "$r" "$g" "$b"      # cursor
+# }
+
 __apply_accent() {
     [[ -t 1 ]] || return
     local r g b
@@ -47,9 +59,15 @@ __apply_accent() {
     local lr=$(( r + (255 - r) * 35 / 100 ))
     local lg=$(( g + (255 - g) * 35 / 100 ))
     local lb=$(( b + (255 - b) * 35 / 100 ))
-    printf '\e]4;4;rgb:%02x/%02x/%02x\a'  "$r" "$g" "$b"      # slot 4  = accent
-    printf '\e]4;12;rgb:%02x/%02x/%02x\a' "$lr" "$lg" "$lb"   # slot 12 = lighter accent
-    printf '\e]12;rgb:%02x/%02x/%02x\a'   "$r" "$g" "$b"      # cursor
+
+    local s
+    for s in 4 6; do      # normal slots  -> accent
+        printf '\e]4;%d;rgb:%02x/%02x/%02x\a' "$s" "$r" "$g" "$b"
+    done
+    for s in 12 14; do    # bright slots  -> lighter accent
+        printf '\e]4;%d;rgb:%02x/%02x/%02x\a' "$s" "$lr" "$lg" "$lb"
+    done
+    printf '\e]12;rgb:%02x/%02x/%02x\a' "$r" "$g" "$b"   # cursor
 }
 
 __set_custom_prompt() {
