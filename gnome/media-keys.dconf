@@ -1,7 +1,7 @@
 [/]
 calculator=['<Super>q']
 control-center=['<Control>comma']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
 logout=@as []
 magnifier-zoom-in=['<Super>plus']
 magnifier-zoom-out=['<Super>minus']
@@ -15,11 +15,6 @@ volume-up=['AudioRaiseVolume']
 binding='<Super>t'
 command='gnome-terminal'
 name='Terminal'
-
-[custom-keybindings/custom1]
-binding='Print'
-command='flatpak run be.alexandervanhee.gradia --screenshot=INTERACTIVE'
-name='Gradia'
 
 [custom-keybindings/custom10]
 binding='<Shift><Super>f'
@@ -35,6 +30,11 @@ name='Launch File Manager'
 binding='<Super>x'
 command='secrets'
 name='Passwords'
+
+[custom-keybindings/custom3]
+binding='Print'
+command='bash -c "$HOME/apps/Gradia.AppImage --screenshot=INTERACTIVE"'
+name='Gradia'
 
 [custom-keybindings/custom4]
 binding='<Super>m'
