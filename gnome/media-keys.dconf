@@ -1,12 +1,12 @@
 [/]
 calculator=['<Super>q']
 control-center=['<Control>comma']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom7/']
 logout=@as []
 magnifier-zoom-in=['<Super>plus']
 magnifier-zoom-out=['<Super>minus']
 mic-mute=['AudioMicMute']
-search=['<Super>f']
+search=@as []
 volume-down=['AudioLowerVolume']
 volume-mute=['AudioMute']
 volume-up=['AudioRaiseVolume']
@@ -17,7 +17,7 @@ command='gnome-terminal'
 name='Terminal'
 
 [custom-keybindings/custom1]
-binding='<Shift><Super>e'
+binding='<Super>f'
 command='bash -c "gnome-terminal -e ~/SourceApps/gnome/file-picker.sh"'
 name='File-Picker'
 
@@ -54,6 +54,11 @@ name='Manpages'
 binding='<Control><Alt>Delete'
 command='gnome-system-monitor'
 name='Resources'
+
+[custom-keybindings/custom7]
+binding='<Shift><Super>e'
+command='bash -c "gnome-terminal -e ~/SourceApps/gnome/command-run.sh"'
+name='Command Run'
 
 [custom-keybindings/custom8]
 binding='<Super>b'
