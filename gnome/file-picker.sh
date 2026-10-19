@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 file=$(
-    find ~ /usr/bin \
+    find ~ /usr/bin /usr/local/bin \
         \( -name .git -o -name .cache -o -name node_modules \) -prune -o \
         \( -type f -o -type l \) -print 2>/dev/null |
         fzf \
@@ -12,7 +12,8 @@ file=$(
 [ -n "$file" ] || exit 0
 
 if [ -x "$file" ] && [ ! -d "$file" ]; then
-    exec "$file"
+    # exec "$file" >/dev/null 2>&1
+    gnome-terminal -e "$file" >/dev/null 2>&1
 else
     setsid -f xdg-open "$file" >/dev/null 2>&1
 fi
