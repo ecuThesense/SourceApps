@@ -133,9 +133,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Your custom aliases
-alias update='apt update && apt upgrade -y && apt full-upgrade -y && apt autoremove -y'
+alias update='doas apt update && doas apt upgrade -y && doas apt full-upgrade -y && doas apt autoremove -y'
 alias ll='ls -lha --color=auto'
 alias ls='ls --color=auto'
+
+cmc() {
+    "$HOME/SourceApps/gnome/command-run.sh" "$@"
+}
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
