@@ -1,7 +1,7 @@
 [/]
 calculator=['<Super>q']
 control-center=['<Control>comma']
-custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/']
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom4/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom6/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom9/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom10/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom2/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom14/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom5/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom8/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom3/', '/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/']
 logout=@as []
 magnifier-zoom-in=['<Super>plus']
 magnifier-zoom-out=['<Super>minus']
@@ -16,8 +16,12 @@ binding='<Super>t'
 command='gnome-terminal'
 name='Terminal'
 
+[custom-keybindings/custom1]
+binding='<Shift><Super>e'
+command='bash -c "gnome-terminal -e ~/SourceApps/gnome/file-picker.sh"'
+name='File-Picker'
+
 [custom-keybindings/custom10]
-binding='<Shift><Super>f'
 command="gnome-terminal --maximize -- bash -ic '\nfile=$(\n  find . -type f |\n  fzf \\\n    --style=full \\\n   --preview \"cat {}\" \\\n    --bind \"focus:transform-header:file --brief {}\"\n)\n\n[ -n \"$file\" ] && xdg-open \"$file\"\n\nexec bash\n'"
 name='fzf search'
 
