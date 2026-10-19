@@ -1,0 +1,16 @@
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/unibilium.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/libuv.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/luajit.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/lua_compat53.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/luv.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/lpeg.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_c.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_lua.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_vim.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_vimdoc.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_query.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_markdown.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/utf8proc.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/edit_cache.dir
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/rebuild_cache.dir

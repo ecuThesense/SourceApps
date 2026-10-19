@@ -1,0 +1,1 @@
+/bin/cc -fPIC -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/parser.dir/link.d -shared  -o query.so CMakeFiles/parser.dir/src/parser.c.o

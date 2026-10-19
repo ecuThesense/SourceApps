@@ -1,0 +1,1 @@
+/bin/cc -fPIC -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/markdown_inline.dir/link.d -shared  -o markdown_inline.so "CMakeFiles/markdown_inline.dir/tree-sitter-markdown-inline/src/parser.c.o" "CMakeFiles/markdown_inline.dir/tree-sitter-markdown-inline/src/scanner.c.o"

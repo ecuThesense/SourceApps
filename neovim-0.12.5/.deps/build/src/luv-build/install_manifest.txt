@@ -1,0 +1,5 @@
+/home/pavel/neovim-0.12.5/.deps/usr/lib/libluv.a
+/home/pavel/neovim-0.12.5/.deps/usr/include/luv/luv.h
+/home/pavel/neovim-0.12.5/.deps/usr/include/luv/util.h
+/home/pavel/neovim-0.12.5/.deps/usr/include/luv/lhandle.h
+/home/pavel/neovim-0.12.5/.deps/usr/include/luv/lreq.h

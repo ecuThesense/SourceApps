@@ -1,0 +1,13 @@
+# Target labels
+ lua_compat53
+# Source files and their labels
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/lua_compat53
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/lua_compat53.rule
+/home/pavel/neovim-0.12.5/.deps/CMakeFiles/lua_compat53-complete.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-build.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-configure.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-download.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-install.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-mkdir.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-patch.rule
+/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53-stamp/lua_compat53-update.rule

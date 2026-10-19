@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_vim"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_vim.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/CMakeFiles/treesitter_vim-complete.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-build.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-configure.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-download.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-install.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-mkdir.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-patch.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_vim-stamp/treesitter_vim-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"treesitter_vim"
+		],
+		"name" : "treesitter_vim"
+	}
+}

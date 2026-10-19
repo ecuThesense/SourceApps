@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/pavel/neovim-0.12.5/.deps/build/src/luv-build",
+  "command": "/bin/cc  -I/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53/c-api -I\"/home/pavel/neovim-0.12.5/.deps/usr/include\" -I\"/home/pavel/neovim-0.12.5/.deps/usr/include/luajit-2.1\" -w -O3 -DNDEBUG -std=gnu99 -fPIC -o CMakeFiles/libluv_a.dir/src/luv.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/luv/src/luv.c",
+  "file": "/home/pavel/neovim-0.12.5/.deps/build/src/luv/src/luv.c",
+  "output": "CMakeFiles/libluv_a.dir/src/luv.c.o"
+},
+{
+  "directory": "/home/pavel/neovim-0.12.5/.deps/build/src/luv-build",
+  "command": "/bin/cc  -I/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53/c-api -I\"/home/pavel/neovim-0.12.5/.deps/usr/include\" -I\"/home/pavel/neovim-0.12.5/.deps/usr/include/luajit-2.1\" -w -O3 -DNDEBUG -std=gnu99 -fPIE -o CMakeFiles/test.dir/src/test.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/luv/src/test.c",
+  "file": "/home/pavel/neovim-0.12.5/.deps/build/src/luv/src/test.c",
+  "output": "CMakeFiles/test.dir/src/test.c.o"
+},
+{
+  "directory": "/home/pavel/neovim-0.12.5/.deps/build/src/luv-build",
+  "command": "/bin/cc  -I/home/pavel/neovim-0.12.5/.deps/build/src/lua_compat53/c-api -I\"/home/pavel/neovim-0.12.5/.deps/usr/include\" -I\"/home/pavel/neovim-0.12.5/.deps/usr/include/luajit-2.1\" -w -O3 -DNDEBUG -std=gnu99 -fPIE -o CMakeFiles/test.dir/src/luv.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/luv/src/luv.c",
+  "file": "/home/pavel/neovim-0.12.5/.deps/build/src/luv/src/luv.c",
+  "output": "CMakeFiles/test.dir/src/luv.c.o"
+}
+]

@@ -1,0 +1,940 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:10 (project)"
+    message: |
+      The system is: Linux - 6.12.107+deb13-amd64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:10 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /bin/cc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/3.31.6/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:74 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:10 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_7d343/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg'
+        /bin/gmake  -f CMakeFiles/cmTC_7d343.dir/build.make CMakeFiles/cmTC_7d343.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg'
+        Building C object CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o
+        /bin/cc   -std=gnu99 -fPIE   -v -o CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/bin/cc
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=3
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Debian 14.2.0-19) 
+        COLLECT_GCC_OPTIONS='-std=gnu99' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7d343.dir/'
+         /usr/libexec/gcc/x86_64-linux-gnu/14/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7d343.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -std=gnu99 -version -fPIE -fasynchronous-unwind-tables -o /tmp/ccD2dYJ7.s
+        GNU C99 (Debian 14.2.0-19) version 14.2.0 (x86_64-linux-gnu)
+        	compiled by GNU C version 14.2.0, GMP version 6.3.0, MPFR version 4.2.1, MPC version 1.3.1, isl version isl-0.27-GMP
+        
+        warning: MPFR header version 4.2.1 differs from library version 4.2.2.
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/14/include-fixed/x86_64-linux-gnu"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/14/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /usr/lib/gcc/x86_64-linux-gnu/14/include
+         /usr/local/include
+         /usr/include/x86_64-linux-gnu
+         /usr/include
+        End of search list.
+        Compiler executable checksum: 0051dfc1fa4e89ba97760da93f2546f3
+        COLLECT_GCC_OPTIONS='-std=gnu99' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7d343.dir/'
+         as -v --64 -o CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o /tmp/ccD2dYJ7.s
+        GNU assembler version 2.44 (x86_64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.44
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-std=gnu99' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_7d343
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d343.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/bin/cc
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-linux-gnu
+        Configured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c,ada,c++,go,d,fortran,objc,obj-c++,m2,rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-nvptx/usr,amdgcn-amdhsa=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=3
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 14.2.0 (Debian 14.2.0-19) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7d343' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7d343.'
+         /usr/libexec/gcc/x86_64-linux-gnu/14/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/14/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGWJtcL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7d343 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/14 -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/14/../../.. -v CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+        collect2 version 14.2.0
+        /bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/14/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGWJtcL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7d343 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/14 -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/14/../../.. -v CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o
+        GNU ld (GNU Binutils for Debian) 2.44
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7d343' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7d343.'
+        /bin/cc  -v -Wl,-v CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -o cmTC_7d343
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg'
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:182 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:10 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/usr/lib/gcc/x86_64-linux-gnu/14/include]
+          add: [/usr/local/include]
+          add: [/usr/include/x86_64-linux-gnu]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/usr/lib/gcc/x86_64-linux-gnu/14/include] ==> [/usr/lib/gcc/x86_64-linux-gnu/14/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/usr/include/x86_64-linux-gnu] ==> [/usr/include/x86_64-linux-gnu]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/usr/lib/gcc/x86_64-linux-gnu/14/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:218 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:10 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_7d343/fast]
+        ignore line: [gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg']
+        ignore line: [/bin/gmake  -f CMakeFiles/cmTC_7d343.dir/build.make CMakeFiles/cmTC_7d343.dir/build]
+        ignore line: [gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-WDOIVg']
+        ignore line: [Building C object CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/bin/cc   -std=gnu99 -fPIE   -v -o CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -c /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/bin/cc]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=3]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (Debian 14.2.0-19) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu99' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7d343.dir/']
+        ignore line: [ /usr/libexec/gcc/x86_64-linux-gnu/14/cc1 -quiet -v -imultiarch x86_64-linux-gnu /usr/share/cmake-3.31/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_7d343.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -std=gnu99 -version -fPIE -fasynchronous-unwind-tables -o /tmp/ccD2dYJ7.s]
+        ignore line: [GNU C99 (Debian 14.2.0-19) version 14.2.0 (x86_64-linux-gnu)]
+        ignore line: [	compiled by GNU C version 14.2.0  GMP version 6.3.0  MPFR version 4.2.1  MPC version 1.3.1  isl version isl-0.27-GMP]
+        ignore line: []
+        ignore line: [warning: MPFR header version 4.2.1 differs from library version 4.2.2.]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/local/include/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/14/include-fixed/x86_64-linux-gnu"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/14/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/x86_64-linux-gnu/14/../../../../x86_64-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /usr/lib/gcc/x86_64-linux-gnu/14/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /usr/include/x86_64-linux-gnu]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 0051dfc1fa4e89ba97760da93f2546f3]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu99' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7d343.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o /tmp/ccD2dYJ7.s]
+        ignore line: [GNU assembler version 2.44 (x86_64-linux-gnu) using BFD version (GNU Binutils for Debian) 2.44]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-std=gnu99' '-fPIE' '-v' '-o' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_7d343]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7d343.dir/link.txt --verbose=1]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/bin/cc]
+        ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper]
+        ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none:amdgcn-amdhsa]
+        ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+        ignore line: [Target: x86_64-linux-gnu]
+        ignore line: [Configured with: ../src/configure -v --with-pkgversion='Debian 14.2.0-19' --with-bugurl=file:///usr/share/doc/gcc-14/README.Bugs --enable-languages=c ada c++ go d fortran objc obj-c++ m2 rust --prefix=/usr --with-gcc-major-version-only --program-suffix=-14 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/libexec --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --enable-bootstrap --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-libstdcxx-backtrace --enable-gnu-unique-object --disable-vtable-verify --enable-plugin --enable-default-pie --with-system-zlib --enable-libphobos-checking=release --with-target-system-zlib=auto --enable-objc-gc=auto --enable-multiarch --disable-werror --enable-cet --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32 m64 mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-nvptx/usr amdgcn-amdhsa=/build/reproducible-path/gcc-14-14.2.0/debian/tmp-gcn/usr --enable-offload-defaulted --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu --with-build-config=bootstrap-lto-lean --enable-link-serialization=3]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 14.2.0 (Debian 14.2.0-19) ]
+        ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/14/:/usr/libexec/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/14/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/14/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_7d343' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_7d343.']
+        link line: [ /usr/libexec/gcc/x86_64-linux-gnu/14/collect2 -plugin /usr/libexec/gcc/x86_64-linux-gnu/14/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGWJtcL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7d343 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/14 -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/14/../../.. -v CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o]
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/14/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/usr/libexec/gcc/x86_64-linux-gnu/14/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccGWJtcL.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--build-id] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [--hash-style=gnu] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-pie] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_7d343] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/14] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/14]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib]
+          arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+          arg [-L/lib/../lib] ==> dir [/lib/../lib]
+          arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+          arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+          arg [-L/usr/lib/gcc/x86_64-linux-gnu/14/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/14/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--push-state] ==> ignore
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--pop-state] ==> ignore
+          arg [/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o]
+          arg [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o] ==> obj [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o]
+        ignore line: [collect2 version 14.2.0]
+        ignore line: [/bin/ld -plugin /usr/libexec/gcc/x86_64-linux-gnu/14/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-linux-gnu/14/lto-wrapper -plugin-opt=-fresolution=/tmp/ccGWJtcL.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_7d343 /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/14 -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/14/../../.. -v CMakeFiles/cmTC_7d343.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o]
+        linker tool for 'C': /bin/ld
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/Scrt1.o] ==> [/usr/lib/x86_64-linux-gnu/Scrt1.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crti.o] ==> [/usr/lib/x86_64-linux-gnu/crti.o]
+        collapse obj [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o] ==> [/usr/lib/x86_64-linux-gnu/crtn.o]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/14] ==> [/usr/lib/gcc/x86_64-linux-gnu/14]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/14/../../../../lib] ==> [/usr/lib]
+        collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+        collapse library dir [/lib/../lib] ==> [/lib]
+        collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+        collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+        collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/14/../../..] ==> [/usr/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/usr/lib/x86_64-linux-gnu/Scrt1.o;/usr/lib/x86_64-linux-gnu/crti.o;/usr/lib/gcc/x86_64-linux-gnu/14/crtbeginS.o;/usr/lib/gcc/x86_64-linux-gnu/14/crtendS.o;/usr/lib/x86_64-linux-gnu/crtn.o]
+        implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/14;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "/usr/share/cmake-3.31/Modules/CMakeDetermineCompilerABI.cmake:255 (cmake_determine_linker_id)"
+      - "/usr/share/cmake-3.31/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:10 (project)"
+    message: |
+      Running the C compiler's linker: "/bin/ld" "-v"
+      GNU ld (GNU Binutils for Debian) 2.44
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:109 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_UNUSED_PARAMETER_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_UNUSED_PARAMETER_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_e1ae4/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr'
+        /bin/gmake  -f CMakeFiles/cmTC_e1ae4.dir/build.make CMakeFiles/cmTC_e1ae4.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr'
+        Building C object CMakeFiles/cmTC_e1ae4.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_UNUSED_PARAMETER_MSVC  -std=gnu11 -fPIE   /wd4100 -o CMakeFiles/cmTC_e1ae4.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr/src.c
+        cc: warning: /wd4100: linker input file unused because linking not done
+        cc: error: /wd4100: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_e1ae4.dir/build.make:81: CMakeFiles/cmTC_e1ae4.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_e1ae4.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr'
+        gmake[4]: *** [Makefile:134: cmTC_e1ae4/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-VDnVzr'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:110 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_CONDITIONAL_CONSTANT_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_f7b2d/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3'
+        /bin/gmake  -f CMakeFiles/cmTC_f7b2d.dir/build.make CMakeFiles/cmTC_f7b2d.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3'
+        Building C object CMakeFiles/cmTC_f7b2d.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_CONDITIONAL_CONSTANT_MSVC  -std=gnu11 -fPIE   /wd4127 -o CMakeFiles/cmTC_f7b2d.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3/src.c
+        cc: warning: /wd4127: linker input file unused because linking not done
+        cc: error: /wd4127: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_f7b2d.dir/build.make:81: CMakeFiles/cmTC_f7b2d.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_f7b2d.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3'
+        gmake[4]: *** [Makefile:134: cmTC_f7b2d/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-KnGyk3'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:111 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_NONSTANDARD_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_NONSTANDARD_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_b9f3a/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED'
+        /bin/gmake  -f CMakeFiles/cmTC_b9f3a.dir/build.make CMakeFiles/cmTC_b9f3a.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED'
+        Building C object CMakeFiles/cmTC_b9f3a.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_NONSTANDARD_MSVC  -std=gnu11 -fPIE   /wd4201 -o CMakeFiles/cmTC_b9f3a.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED/src.c
+        cc: warning: /wd4201: linker input file unused because linking not done
+        cc: error: /wd4201: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_b9f3a.dir/build.make:81: CMakeFiles/cmTC_b9f3a.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_b9f3a.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED'
+        gmake[4]: *** [Makefile:134: cmTC_b9f3a/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-cPSKED'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:112 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_3586c/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB'
+        /bin/gmake  -f CMakeFiles/cmTC_3586c.dir/build.make CMakeFiles/cmTC_3586c.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB'
+        Building C object CMakeFiles/cmTC_3586c.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_NONSTANDARD_EMPTY_TU_MSVC  -std=gnu11 -fPIE   /wd4206 -o CMakeFiles/cmTC_3586c.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB/src.c
+        cc: warning: /wd4206: linker input file unused because linking not done
+        cc: error: /wd4206: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_3586c.dir/build.make:81: CMakeFiles/cmTC_3586c.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_3586c.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB'
+        gmake[4]: *** [Makefile:134: cmTC_3586c/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-OHx8IB'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:113 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_6a2a6/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD'
+        /bin/gmake  -f CMakeFiles/cmTC_6a2a6.dir/build.make CMakeFiles/cmTC_6a2a6.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD'
+        Building C object CMakeFiles/cmTC_6a2a6.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_NONSTANDARD_FILE_SCOPE_MSVC  -std=gnu11 -fPIE   /wd4210 -o CMakeFiles/cmTC_6a2a6.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD/src.c
+        cc: warning: /wd4210: linker input file unused because linking not done
+        cc: error: /wd4210: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_6a2a6.dir/build.make:81: CMakeFiles/cmTC_6a2a6.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_6a2a6.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD'
+        gmake[4]: *** [Makefile:134: cmTC_6a2a6/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-H4ZJZD'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:114 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_0d4ac/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq'
+        /bin/gmake  -f CMakeFiles/cmTC_0d4ac.dir/build.make CMakeFiles/cmTC_0d4ac.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq'
+        Building C object CMakeFiles/cmTC_0d4ac.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_NONSTANDARD_NONSTATIC_DLIMPORT_MSVC  -std=gnu11 -fPIE   /wd4232 -o CMakeFiles/cmTC_0d4ac.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq/src.c
+        cc: warning: /wd4232: linker input file unused because linking not done
+        cc: error: /wd4232: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_0d4ac.dir/build.make:81: CMakeFiles/cmTC_0d4ac.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_0d4ac.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq'
+        gmake[4]: *** [Makefile:134: cmTC_0d4ac/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-k8g1Rq'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:115 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_HIDES_LOCAL"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_HIDES_LOCAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_8a49b/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ'
+        /bin/gmake  -f CMakeFiles/cmTC_8a49b.dir/build.make CMakeFiles/cmTC_8a49b.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ'
+        Building C object CMakeFiles/cmTC_8a49b.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_HIDES_LOCAL  -std=gnu11 -fPIE   /wd4456 -o CMakeFiles/cmTC_8a49b.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ/src.c
+        cc: warning: /wd4456: linker input file unused because linking not done
+        cc: error: /wd4456: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_8a49b.dir/build.make:81: CMakeFiles/cmTC_8a49b.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_8a49b.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ'
+        gmake[4]: *** [Makefile:134: cmTC_8a49b/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-HqiHhJ'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:116 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_HIDES_PARAM"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_HIDES_PARAM"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_03d59/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz'
+        /bin/gmake  -f CMakeFiles/cmTC_03d59.dir/build.make CMakeFiles/cmTC_03d59.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz'
+        Building C object CMakeFiles/cmTC_03d59.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_HIDES_PARAM  -std=gnu11 -fPIE   /wd4457 -o CMakeFiles/cmTC_03d59.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz/src.c
+        cc: warning: /wd4457: linker input file unused because linking not done
+        cc: error: /wd4457: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_03d59.dir/build.make:81: CMakeFiles/cmTC_03d59.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_03d59.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz'
+        gmake[4]: *** [Makefile:134: cmTC_03d59/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-W4fTQz'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:117 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_HIDES_GLOBAL"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_HIDES_GLOBAL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_e40de/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC'
+        /bin/gmake  -f CMakeFiles/cmTC_e40de.dir/build.make CMakeFiles/cmTC_e40de.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC'
+        Building C object CMakeFiles/cmTC_e40de.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_HIDES_GLOBAL  -std=gnu11 -fPIE   /wd4459 -o CMakeFiles/cmTC_e40de.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC/src.c
+        cc: warning: /wd4459: linker input file unused because linking not done
+        cc: error: /wd4459: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_e40de.dir/build.make:81: CMakeFiles/cmTC_e40de.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_e40de.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC'
+        gmake[4]: *** [Makefile:134: cmTC_e40de/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-eBi2zC'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:118 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_cd6d6/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj'
+        /bin/gmake  -f CMakeFiles/cmTC_cd6d6.dir/build.make CMakeFiles/cmTC_cd6d6.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj'
+        Building C object CMakeFiles/cmTC_cd6d6.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_CONDITIONAL_ASSIGNMENT_MSVC  -std=gnu11 -fPIE   /wd4706 -o CMakeFiles/cmTC_cd6d6.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj/src.c
+        cc: warning: /wd4706: linker input file unused because linking not done
+        cc: error: /wd4706: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_cd6d6.dir/build.make:81: CMakeFiles/cmTC_cd6d6.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_cd6d6.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj'
+        gmake[4]: *** [Makefile:134: cmTC_cd6d6/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-BArLTj'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:119 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_UNSAFE_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_UNSAFE_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_fee7b/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO'
+        /bin/gmake  -f CMakeFiles/cmTC_fee7b.dir/build.make CMakeFiles/cmTC_fee7b.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO'
+        Building C object CMakeFiles/cmTC_fee7b.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_UNSAFE_MSVC  -std=gnu11 -fPIE   /wd4996 -o CMakeFiles/cmTC_fee7b.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO/src.c
+        cc: warning: /wd4996: linker input file unused because linking not done
+        cc: error: /wd4996: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_fee7b.dir/build.make:81: CMakeFiles/cmTC_fee7b.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_fee7b.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO'
+        gmake[4]: *** [Makefile:134: cmTC_fee7b/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-FzfvSO'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:121 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_WALL"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_WALL"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_5e78b/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh'
+        /bin/gmake  -f CMakeFiles/cmTC_5e78b.dir/build.make CMakeFiles/cmTC_5e78b.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh'
+        Building C object CMakeFiles/cmTC_5e78b.dir/src.c.o
+        /bin/cc -DUV_LINT_WALL  -std=gnu11 -fPIE   -Wall -o CMakeFiles/cmTC_5e78b.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh/src.c
+        Linking C executable cmTC_5e78b
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5e78b.dir/link.txt --verbose=1
+        /bin/cc CMakeFiles/cmTC_5e78b.dir/src.c.o -o cmTC_5e78b
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh'
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-rEaMbh'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:124 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_NO_UNUSED_PARAMETER"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_NO_UNUSED_PARAMETER"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_3e9c9/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu'
+        /bin/gmake  -f CMakeFiles/cmTC_3e9c9.dir/build.make CMakeFiles/cmTC_3e9c9.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu'
+        Building C object CMakeFiles/cmTC_3e9c9.dir/src.c.o
+        /bin/cc -DUV_LINT_NO_UNUSED_PARAMETER  -std=gnu11 -fPIE   -Wno-unused-parameter -o CMakeFiles/cmTC_3e9c9.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu/src.c
+        Linking C executable cmTC_3e9c9
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e9c9.dir/link.txt --verbose=1
+        /bin/cc CMakeFiles/cmTC_3e9c9.dir/src.c.o -o cmTC_3e9c9
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu'
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-fPROAu'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:125 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_STRICT_PROTOTYPES"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_STRICT_PROTOTYPES"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_d009f/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d'
+        /bin/gmake  -f CMakeFiles/cmTC_d009f.dir/build.make CMakeFiles/cmTC_d009f.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d'
+        Building C object CMakeFiles/cmTC_d009f.dir/src.c.o
+        /bin/cc -DUV_LINT_STRICT_PROTOTYPES  -std=gnu11 -fPIE   -Wstrict-prototypes -o CMakeFiles/cmTC_d009f.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d/src.c
+        Linking C executable cmTC_d009f
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d009f.dir/link.txt --verbose=1
+        /bin/cc CMakeFiles/cmTC_d009f.dir/src.c.o -o cmTC_d009f
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d'
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-J57I8d'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:126 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_EXTRA"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_EXTRA"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_664ae/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2'
+        /bin/gmake  -f CMakeFiles/cmTC_664ae.dir/build.make CMakeFiles/cmTC_664ae.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2'
+        Building C object CMakeFiles/cmTC_664ae.dir/src.c.o
+        /bin/cc -DUV_LINT_EXTRA  -std=gnu11 -fPIE   -Wextra -o CMakeFiles/cmTC_664ae.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2/src.c
+        Linking C executable cmTC_664ae
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_664ae.dir/link.txt --verbose=1
+        /bin/cc CMakeFiles/cmTC_664ae.dir/src.c.o -o cmTC_664ae
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2'
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-ipH2b2'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:128 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_LINT_UTF8_MSVC"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_LINT_UTF8_MSVC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_4073f/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI'
+        /bin/gmake  -f CMakeFiles/cmTC_4073f.dir/build.make CMakeFiles/cmTC_4073f.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI'
+        Building C object CMakeFiles/cmTC_4073f.dir/src.c.o
+        /bin/cc -DUV_LINT_UTF8_MSVC  -std=gnu11 -fPIE   /utf-8 -o CMakeFiles/cmTC_4073f.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI/src.c
+        cc: warning: /utf-8: linker input file unused because linking not done
+        cc: error: /utf-8: linker input file not found: No such file or directory
+        gmake[5]: *** [CMakeFiles/cmTC_4073f.dir/build.make:81: CMakeFiles/cmTC_4073f.dir/src.c.o] Error 1
+        gmake[5]: *** Deleting file 'CMakeFiles/cmTC_4073f.dir/src.c.o'
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI'
+        gmake[4]: *** [Makefile:134: cmTC_4073f/fast] Error 2
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-aJX2zI'
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake:108 (try_compile)"
+      - "/usr/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.31/Modules/CheckCCompilerFlag.cmake:56 (cmake_check_compiler_flag)"
+      - "CMakeLists.txt:167 (check_c_compiler_flag)"
+    checks:
+      - "Performing Test UV_F_STRICT_ALIASING"
+    directories:
+      source: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW"
+      binary: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/pavel/neovim-0.12.5/.deps/build/src/libuv/cmake"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "UV_F_STRICT_ALIASING"
+      cached: true
+      stdout: |
+        Change Dir: '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /bin/gmake -f Makefile cmTC_84786/fast
+        gmake[4]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW'
+        /bin/gmake  -f CMakeFiles/cmTC_84786.dir/build.make CMakeFiles/cmTC_84786.dir/build
+        gmake[5]: Entering directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW'
+        Building C object CMakeFiles/cmTC_84786.dir/src.c.o
+        /bin/cc -DUV_F_STRICT_ALIASING  -std=gnu11 -fPIE   -fno-strict-aliasing -o CMakeFiles/cmTC_84786.dir/src.c.o -c /home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW/src.c
+        Linking C executable cmTC_84786
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_84786.dir/link.txt --verbose=1
+        /bin/cc CMakeFiles/cmTC_84786.dir/src.c.o -o cmTC_84786
+        gmake[5]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW'
+        gmake[4]: Leaving directory '/home/pavel/neovim-0.12.5/.deps/build/src/libuv-build/CMakeFiles/CMakeScratch/TryCompile-iGPCDW'
+        
+      exitCode: 0
+...

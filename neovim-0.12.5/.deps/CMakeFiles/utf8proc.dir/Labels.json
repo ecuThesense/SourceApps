@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/CMakeFiles/utf8proc"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/CMakeFiles/utf8proc.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/CMakeFiles/utf8proc-complete.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-build.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-configure.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-download.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-install.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-mkdir.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-patch.rule"
+		},
+		{
+			"file" : "/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-stamp/utf8proc-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"utf8proc"
+		],
+		"name" : "utf8proc"
+	}
+}

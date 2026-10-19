@@ -1,0 +1,7 @@
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/utf8proc.dir
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/edit_cache.dir
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/rebuild_cache.dir
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/list_install_components.dir
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/install.dir
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/install/local.dir
+/home/pavel/neovim-0.12.5/.deps/build/src/utf8proc-build/CMakeFiles/install/strip.dir

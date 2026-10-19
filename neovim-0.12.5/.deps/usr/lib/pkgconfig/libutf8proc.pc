@@ -1,0 +1,10 @@
+prefix=/home/pavel/neovim-0.12.5/.deps/usr
+exec_prefix=/home/pavel/neovim-0.12.5/.deps/usr/bin
+libdir=/home/pavel/neovim-0.12.5/.deps/usr/lib
+includedir=/home/pavel/neovim-0.12.5/.deps/usr/include
+
+Name: libutf8proc
+Description: UTF8 processing
+Version: 2.11.3
+Libs: -L${libdir} -lutf8proc
+Cflags: -I${includedir} -DUTF8PROC_EXPORTS

@@ -1,0 +1,2 @@
+/bin/ar qc libunibilium.a CMakeFiles/unibilium.dir/unibilium.c.o CMakeFiles/unibilium.dir/uninames.c.o CMakeFiles/unibilium.dir/uniutil.c.o
+/bin/ranlib libunibilium.a

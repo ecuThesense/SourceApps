@@ -1,59 +1,22 @@
 #!/bin/sh
-# Pick a bookmark ("name | URL"), paste a link, or type a query to web-search.
-# bm="$HOME/bookmarks.html"
-#
-# search_url() {
-#     q=$(printf '%s' "$1" | od -An -v -tx1 | tr -d ' \n' | sed 's/../%&/g')
-#     printf 'https://www.startpage.com/do/dsearch?query=%s' "$q"
-# }
-#
-# # url<TAB>title, with HTML entities decoded up front
-# pairs=""
-# [ -s "$bm" ] && pairs=$(sed -n 's/.*<A HREF="\([^"]*\)"[^>]*>\(.*\)<\/A>.*/\1\t\2/p' "$bm" |
-#                         sed 's/&lt;/</g; s/&gt;/>/g; s/&quot;/"/g; s/&amp;/\&/g')
-#
-# sel=$(printf '%s\n' "$pairs" | awk -F'\t' 'NF>=2{print $2 " | " $1}' | sort -f |
-#       wofi --dmenu -i -p 'Bookmark / URL / Search:')
-# [ -z "$sel" ] && exit 0
-#
-# # did we pick a "name | URL" line? then take its URL
-# url=$(printf '%s\n' "$pairs" |
-#       T="$sel" awk -F'\t' 'NF>=2 && ($2 " | " $1)==ENVIRON["T"]{print $1; exit}')
-#
-# if [ -z "$url" ]; then
-#     case "$sel" in
-#         http://*|https://*|file://*|about:*)
-#             url=$sel ;;                       # full link
-#         *[[:space:]]*)
-#             url=$(search_url "$sel") ;;       # several words: search
-#         *.*)
-#             url="https://$sel" ;;             # bare domain
-#         *)
-#             url=$(search_url "$sel") ;;       # single word: search
-#     esac
-# fi
-#
-# exec firefox --new-tab "$url"
-
 bm="$HOME/bookmarks.html"
+ddg_url="https://www.duckduckgo.com"
 
-search_url() {
-    q=$(printf '%s' "$1" |
-        od -An -v -tx1 |
-        tr -d ' \n' |
-        sed 's/../%&/g')
-
-    printf 'https://www.startpage.com/do/dsearch?query=%s' "$q"
-}
-
-# Open GNOME Terminal when launched from a graphical menu.
+# Launched from a graphical menu: run the picker in GNOME Terminal,
+# wait for it to close, then open Firefox from here.
 if [ ! -t 0 ] || [ ! -t 1 ]; then
     case "$0" in
         /*) script_path="$0" ;;
         *)  script_path="$PWD/$0" ;;
     esac
 
-    exec gnome-terminal -- "$script_path"
+    out=$(mktemp)
+    gnome-terminal --wait -- "$script_path" "$out"
+    url=$(cat "$out")
+    rm -f "$out"
+
+    [ -n "$url" ] && exec firefox --new-tab "$url"
+    exit 0
 fi
 
 # Parse Firefox bookmarks: URL<TAB>title.
@@ -74,14 +37,14 @@ menu=$(
         sort -f
 )
 
-# Select a bookmark, or enter a URL/search query.
+# Select a bookmark, or enter a URL.
 sel=$(
     {
         [ -n "$menu" ] && printf '%s\n' "$menu"
     } |
     fzf \
-        --prompt='Bookmark / URL / Search: ' \
-        --header='Select a bookmark or type a URL/search query' \
+        --prompt='Bookmark / URL: ' \
+        --header='Select a bookmark or type a URL' \
         --bind='enter:accept-or-print-query'
 )
 
@@ -104,15 +67,20 @@ if [ -z "$url" ]; then
             url=$sel
             ;;
         *[[:space:]]*)
-            url=$(search_url "$sel")
+            url=$ddg_url
             ;;
         *.*)
             url="https://$sel"
             ;;
         *)
-            url=$(search_url "$sel")
+            url=$ddg_url
             ;;
     esac
 fi
 
-exec firefox --new-tab "$url"
+# Hand the URL back to the launcher; if run by hand, open it directly.
+if [ -n "$1" ]; then
+    printf '%s' "$url" > "$1"
+else
+    firefox --new-tab "$url" >/dev/null 2>&1 &
+fi

@@ -1,0 +1,7 @@
+/home/pavel/neovim-0.12.5/.deps/usr/include/utf8proc.h
+/home/pavel/neovim-0.12.5/.deps/usr/lib/libutf8proc.a
+/home/pavel/neovim-0.12.5/.deps/usr/lib/pkgconfig/libutf8proc.pc
+/home/pavel/neovim-0.12.5/.deps/usr/lib/cmake/utf8proc/utf8proc-targets.cmake
+/home/pavel/neovim-0.12.5/.deps/usr/lib/cmake/utf8proc/utf8proc-targets-release.cmake
+/home/pavel/neovim-0.12.5/.deps/usr/lib/cmake/utf8proc/utf8proc-config.cmake
+/home/pavel/neovim-0.12.5/.deps/usr/lib/cmake/utf8proc/utf8proc-config-version.cmake
