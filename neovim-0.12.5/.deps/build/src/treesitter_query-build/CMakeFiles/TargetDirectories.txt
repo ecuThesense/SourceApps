@@ -1,7 +1,0 @@
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/parser.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/edit_cache.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/rebuild_cache.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/list_install_components.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/install.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/install/local.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_query-build/CMakeFiles/install/strip.dir

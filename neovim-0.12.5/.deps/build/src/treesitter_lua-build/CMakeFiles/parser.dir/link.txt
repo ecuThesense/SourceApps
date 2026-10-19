@@ -1,1 +1,0 @@
-/bin/cc -fPIC -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/parser.dir/link.d -shared  -o lua.so CMakeFiles/parser.dir/src/parser.c.o CMakeFiles/parser.dir/src/scanner.c.o

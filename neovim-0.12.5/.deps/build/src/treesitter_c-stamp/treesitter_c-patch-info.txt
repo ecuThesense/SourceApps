@@ -1,6 +1,0 @@
-# This is a generated file and its contents are an internal implementation detail.
-# The update step will be re-executed if anything in this file changes.
-# No other meaning or use of this file is supported.
-
-command=/usr/bin/cmake;-E;copy;/home/pavel/neovim-0.12.5/cmake.deps/cmake/TreesitterParserCMakeLists.txt;/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_c/CMakeLists.txt
-work_dir=/home/pavel/neovim-0.12.5/.deps/build/src/treesitter_c

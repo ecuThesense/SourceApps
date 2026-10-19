@@ -1,2 +1,0 @@
-/bin/ar qc libluv.a CMakeFiles/libluv_a.dir/src/luv.c.o
-/bin/ranlib libluv.a

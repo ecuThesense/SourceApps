@@ -1,3 +1,0 @@
-/home/pavel/neovim-0.12.5/.deps/usr/include/tree_sitter/api.h
-/home/pavel/neovim-0.12.5/.deps/usr/lib/pkgconfig/tree-sitter.pc
-/home/pavel/neovim-0.12.5/.deps/usr/lib/libtree-sitter.a

@@ -1,7 +1,0 @@
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/lpeg.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/edit_cache.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/rebuild_cache.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/list_install_components.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/install.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/install/local.dir
-/home/pavel/neovim-0.12.5/.deps/build/src/lpeg-build/CMakeFiles/install/strip.dir
