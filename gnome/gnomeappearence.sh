@@ -1,3 +1,4 @@
+# In case if you used gtk3 or something like that and want to switch to original gnome
 dconf dump / > ~/dconf-backup.ini
 # dconf load / < ~/dconf-backup.ini
 dconf reset -f /org/gnome/desktop/interface/
