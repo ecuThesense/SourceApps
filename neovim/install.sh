@@ -3,3 +3,4 @@ cd neovim
 git checkout stable
 make CMAKE_BUILD_TYPE=Release
 doas make install
+cp -r ~/SourceApps/neovim/nvim/ ~/.config/
