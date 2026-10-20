@@ -94,7 +94,7 @@ style = "bg:c4"
 format = "[ $symbol $context ]($style) $path"
 [time]
 disabled = false
-time_format = "%T" # Hour:Minute:Seconds AM/PM Format
+time_format = "%H:%M" # Hour:Minute:Seconds AM/PM Format
 style = "bg:c5 fg:#000000"
 format = "[  $time ]($style)"
 [cmd_duration]
@@ -102,17 +102,17 @@ style = "bg:c6 fg:#000000"
 min_time = 500
 format = "[ took: $duration ]($style)"
 [status]
+map_symbol = false
 style = "bg:c6"
 symbol = " "
 success_symbol = " "
 format = "[ $symbol$common_meaning$signal_name$maybe_int ]($style)"
-map_symbol = false
 disabled = false
 
 [palettes.accent]
-c1 = "#503600"
-c2 = "#785100"
-c3 = "#a06c00"
-c4 = "#c88800"
-c5 = "#deb766"
-c6 = "#e6c98c"
+c1 = "#0d3941"
+c2 = "#135662"
+c3 = "#1a7383"
+c4 = "#2190a4"
+c5 = "#79bcc8"
+c6 = "#9bcdd6"

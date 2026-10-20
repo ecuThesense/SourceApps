@@ -93,7 +93,7 @@ style = "bg:c4"
 format = "[ $symbol $context ]($style) $path"
 [time]
 disabled = false
-time_format = "%T" # Hour:Minute:Seconds AM/PM Format
+time_format = "%H:%M" # Hour:Minute:Seconds AM/PM Format
 style = "bg:c5 fg:#000000"
 format = "[  $time ]($style)"
 [cmd_duration]
