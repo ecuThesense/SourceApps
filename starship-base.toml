@@ -7,20 +7,6 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:c3 bg:c4)\
-$c\
-$python\
-$elixir\
-$elm\
-$golang\
-$gradle\
-$haskell\
-$java\
-$julia\
-$nodejs\
-$nim\
-$rust\
-$scala\
-[](fg:c4 bg:c4)\
 $docker_context\
 [](fg:c4 bg:c5)\
 $time\
@@ -61,10 +47,10 @@ style = "bg:c3"
 format = "[ $symbol ($version) ]($style)"
 [git_branch]
 symbol = ""
-style = "bg:c3 fg:c3"
+style = "bg:c3 fg:#ffffff"
 format = "[ $symbol $branch ]($style)"
 [git_status]
-style = "bg:c3 fg:c3"
+style = "bg:c3 fg:c6"
 format = "[$all_status$ahead_behind ]($style)"
 [golang]
 symbol = " "
