@@ -106,7 +106,7 @@ style = "bg:c6"
 symbol = " "
 success_symbol = " "
 format = "[ $symbol$common_meaning$signal_name$maybe_int ]($style)"
-map_symbol = true
+map_symbol = false
 disabled = false
 
 [palettes.accent]

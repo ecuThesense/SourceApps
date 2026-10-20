@@ -101,9 +101,9 @@ style = "bg:c6 fg:#000000"
 min_time = 500
 format = "[ took: $duration ]($style)"
 [status]
+map_symbol = false
 style = "bg:c6"
 symbol = " "
 success_symbol = " "
 format = "[ $symbol$common_meaning$signal_name$maybe_int ]($style)"
-map_symbol = true
 disabled = false
