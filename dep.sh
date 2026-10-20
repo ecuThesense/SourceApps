@@ -10,5 +10,7 @@ cp ~/SourceApps/starship.toml ~/.config/starship.toml
 cp ~/SourceApps/starship-base.toml ~/.config/starship-base.toml
 cp ~/SourceApps/.bashrc ~/.bashrc
 cp -r ~/SourceApps/AdwaitaMono/ ~/.local/share/fonts/
+rm -rf ~/.config/alacritty/
+cp -r ~/SourceApps/alacritty/ ~/.config/
 fc-cache -fv
 source ~/.bashrc
