@@ -4,7 +4,7 @@ import = [
 
 [window]
 padding = { x = 0, y = 0 }
-opacity = 1.0
+opacity = 0.95
 blur = true
 decorations =  "None"
 startup_mode = "Maximized"
