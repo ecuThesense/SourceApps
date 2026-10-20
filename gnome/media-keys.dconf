@@ -13,7 +13,7 @@ volume-up=['AudioRaiseVolume']
 
 [custom-keybindings/custom0]
 binding='<Super>t'
-command='gnome-terminal'
+command='gnome-terminal --maximize'
 name='Terminal'
 
 [custom-keybindings/custom1]
