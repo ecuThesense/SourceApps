@@ -14,3 +14,7 @@ rm -rf ~/.config/alacritty/
 cp -r ~/SourceApps/alacritty/ ~/.config/
 fc-cache -fv
 source ~/.bashrc
+# doas update-alternatives --config x-terminal-emulator
+# gsettings set org.gnome.desktop.default-applications.terminal exec '/usr/bin/gnome-terminal.wrapper'
+# gsettings set org.gnome.desktop.default-applications.terminal exec-arg '-e'
+# * 0  /usr/bin/gnome-terminal.wrapper   40   auto mode
