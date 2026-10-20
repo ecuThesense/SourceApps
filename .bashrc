@@ -40,6 +40,45 @@ __gnome_accent_rgb() {
   esac
 }
 
+__pl_update_palette() {
+  local r g b
+  read -r r g b <<<"$(__gnome_accent_rgb)"
+
+  # Darker shades: 40%, 60%, 80% of the accent RGB
+  local c1r=$((r * 40 / 100))
+  local c1g=$((g * 40 / 100))
+  local c1b=$((b * 40 / 100))
+
+  local c2r=$((r * 60 / 100))
+  local c2g=$((g * 60 / 100))
+  local c2b=$((b * 60 / 100))
+
+  local c3r=$((r * 80 / 100))
+  local c3g=$((g * 80 / 100))
+  local c3b=$((b * 80 / 100))
+
+  # Main accent
+  __PL_C4="${r};${g};${b}"
+
+  # Lighter shades: blend the accent with white
+  local c5r=$((r + (255 - r) * 40 / 100))
+  local c5g=$((g + (255 - g) * 40 / 100))
+  local c5b=$((b + (255 - b) * 40 / 100))
+
+  local c6r=$((r + (255 - r) * 55 / 100))
+  local c6g=$((g + (255 - g) * 55 / 100))
+  local c6b=$((b + (255 - b) * 55 / 100))
+
+  __PL_C1="${c1r};${c1g};${c1b}"
+  __PL_C2="${c2r};${c2g};${c2b}"
+  __PL_C3="${c3r};${c3g};${c3b}"
+  __PL_C5="${c5r};${c5g};${c5b}"
+  __PL_C6="${c6r};${c6g};${c6b}"
+
+  # Keep the Git status foreground in sync with the lightest shade
+  __PL_FG_C6="38;2;${__PL_C6}"
+}
+
 # __apply_accent() {
 #     [[ -t 1 ]] || return
 #     local r g b
@@ -95,17 +134,17 @@ __PL_FG_C6="38;2;${__PL_C6}"
 # (written as raw UTF-8 bytes so they work in any locale and never collide with
 #  PS1's own \u escape)
 # Powerline separators and Nerd Font icons
-__PL_CAP_L=$'\xee\x82\xb6' #  Left rounded cap
-__PL_SEP=$'\xee\x82\xb0'   #  Right arrow separator
+__PL_CAP_L=''
+__PL_SEP=''
 
-__PL_I_USER=$'\xef\x80\x87'   #  User
-__PL_I_DIR=$'\xef\x81\xbb'    #  Folder
-__PL_I_BRANCH=$'\xef\x90\x98' #  Git branch
-__PL_I_DOCKER=$'\xef\x8c\x88' #  Docker
-__PL_I_TIME=$'\xef\x80\x97'   #  Clock
+__PL_I_USER=''
+__PL_I_DIR=''
+__PL_I_BRANCH=''
+__PL_I_DOCKER=''
+__PL_I_TIME=''
 
-__PL_I_OK=$'\xef\x80\x8c'  #  Check mark
-__PL_I_ERR=$'\xef\x80\x8d' #  Cross
+__PL_I_OK=''
+__PL_I_ERR=''
 
 # Append one segment to __ps.  usage: __pl_add "<bg r;g;b>" "<fg SGR>" "<text>"
 # Text may contain prompt escapes (\u, \A) and ${var} references, which bash
@@ -173,6 +212,8 @@ __pl_git() {
 
 __set_custom_prompt() {
   local EXIT_STATUS=$? # must stay the first line
+
+  __pl_update_palette
 
   # --- command duration ---
   local ms=0
