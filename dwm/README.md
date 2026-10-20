@@ -1,2 +1,0 @@
-# dwm
-personal dwm config
