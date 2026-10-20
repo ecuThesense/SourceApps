@@ -4,6 +4,8 @@ doas apt install ripgrep fd-find luarocks lazygit python3-pynvim
 doas rm -rf /usr/local/share/nvim /usr/local/lib/nvim
 cd ~/apps/neovim/
 doas make install
+
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/AdwaitaMono.zip
 # Make a backup of your current Neovim files:
 # # required
 mv ~/.config/nvim{,.bak}
