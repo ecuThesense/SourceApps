@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+base=~/.config/starship-base.toml
+out=~/.config/starship.toml
+
+accent=$(gsettings get org.gnome.desktop.interface accent-color | tr -d "'")
+declare -A hex=(
+  [blue]=3584e4  [teal]=2190a4   [green]=3a944a
+  [yellow]=c88800 [orange]=ed5b00 [red]=e62d42
+  [pink]=d56199  [purple]=9141ac [slate]=6f8396
+)
+h=${hex[$accent]:-3584e4}
+r=$((16#${h:0:2})); g=$((16#${h:2:2})); b=$((16#${h:4:2}))
+
+# negative = darken toward black, positive = lighten toward white (percent)
+shade() {
+  local p=$1 c v=()
+  for c in $r $g $b; do
+    if (( p < 0 )); then c=$(( c * (100 + p) / 100 ))
+    else c=$(( c + (255 - c) * p / 100 )); fi
+    v+=("$c")
+  done
+  printf '#%02x%02x%02x' "${v[@]}"
+}
+
+{
+  echo 'palette = "accent"'      # must come before any [table]
+  cat "$base"
+  echo
+  echo '[palettes.accent]'
+  echo "c1 = \"$(shade -60)\""
+  echo "c2 = \"$(shade -40)\""
+  echo "c3 = \"$(shade -20)\""
+  echo "c4 = \"#$h\""
+  echo "c5 = \"$(shade 40)\""
+  echo "c6 = \"$(shade 55)\""
+} > "$out"
