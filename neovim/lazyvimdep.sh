@@ -14,9 +14,10 @@ mv ~/.local/share/nvim{,.bak}
 mv ~/.local/state/nvim{,.bak}
 mv ~/.cache/nvim{,.bak}
 # Clone the starter
-git clone https://github.com/LazyVim/starter ~/.config/nvim
+# git clone https://github.com/LazyVim/starter ~/.config/nvim
+cp -r ~/SourceApps/neovim/nvim ~/.config/
 # Remove the .git folder, so you can add it to your own repo later
-rm -rf ~/.config/nvim/.git
+# rm -rf ~/.config/nvim/.git
 # Start Neovim!
 nvim
 # It is recommended to run :LazyHealth after installation. This will load all plugins and check if everything is working correctly.
