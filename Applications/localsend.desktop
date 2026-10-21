@@ -6,6 +6,6 @@ Exec=/usr/local/share/localsend/LocalSend.AppImage
 Terminal=false
 Type=Application
 Keywords=Transfer;
-Icon=/usr/local/share/localsend/localsend-logo.
+Icon=/usr/local/share/localsend/localsend-logo.png
 Categories=Utility;
 StartupNotify=true
