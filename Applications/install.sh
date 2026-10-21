@@ -3,7 +3,7 @@ cp -r ~/apps/tor-browser/start-tor-browser.desktop ~/.local/share/applications/
 
 ### Localsend ###
 mkdir ~/local/share/localsend
-mv -f ~/apps/LocalSend.AppImage ~/.local/share/localsend
+mv -f ~/apps/LocalSend.AppImage ~/.local/share/localsend/
 cp -r ~/SourceApps/Applications/localsend/localsend-logo.png ~/.local/share/localsend
 cp -r ~/SourceApps/Applications/localsend/localsend.desktop ~/.local/share/applications/
 cp -r ~/SourceApps/Applications/localsend/localsend ~/.local/bin/
