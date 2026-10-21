@@ -2,10 +2,10 @@
 Name=LocalSend
 GenericName=LocalSend
 Comment=LocalSend
-Exec=/usr/local/share/localsend/LocalSend.AppImage
+Exec=localsend
 Terminal=false
 Type=Application
 Keywords=Transfer;
-Icon=/usr/local/share/localsend/localsend-logo.png
+Icon=localsend-logo.png
 Categories=Utility;
 StartupNotify=true
