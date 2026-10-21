@@ -6,6 +6,6 @@ Exec=localsend
 Terminal=false
 Type=Application
 Keywords=Transfer;
-Icon=localsend-logo.png
+Icon=localsend-logo
 Categories=Utility;
 StartupNotify=true
