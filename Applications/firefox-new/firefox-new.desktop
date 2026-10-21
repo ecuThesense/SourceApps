@@ -2,12 +2,12 @@
 Name=Firefox-New
 GenericName=Firefox mainline
 Comment=Not ESR, mainline Firefox build
-Exec=~/apps/firefox/firefox-bin %u
+Exec=/usr/local/bin/firefox-new %u
+TryExec=/usr/local/bin/firefox-new
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Keywords=Browser;
-Icon=~/apps/firefox/browser/chrome/icons/default/default128.png
+Icon=/usr/local/share/firefox-new/firefox.png
 Categories=Network;WebBrowser;
 StartupNotify=true
 MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;
