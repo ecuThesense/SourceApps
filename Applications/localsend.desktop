@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=LocalSend
+GenericName=LocalSend
+Comment=LocalSend
+Exec=/usr/local/share/localsend/LocalSend.AppImage
+Terminal=false
+Type=Application
+Keywords=Transfer;
+Icon=/usr/local/share/localsend/localsend-logo.
+Categories=Utility;
+StartupNotify=true
