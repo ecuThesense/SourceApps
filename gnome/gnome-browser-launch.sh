@@ -88,65 +88,65 @@
 bm="$HOME/bookmarks.html"
 
 search_url() {
-    q=$(printf '%s' "$1" |
-        od -An -v -tx1 |
-        tr -d ' \n' |
-        sed 's/../%&/g')
+  q=$(printf '%s' "$1" |
+    od -An -v -tx1 |
+    tr -d ' \n' |
+    sed 's/../%&/g')
 
-    printf 'https://duckduckgo.com/?q=%s' "$q"
+  printf 'https://duckduckgo.com/?q=%s' "$q"
 }
 
 # Launched from a graphical menu: run the picker in GNOME Terminal,
 # wait for it to close, then open Firefox from here.
 if [ ! -t 0 ] || [ ! -t 1 ]; then
-    case "$0" in
-        /*) script_path="$0" ;;
-        *)  script_path="$PWD/$0" ;;
-    esac
+  case "$0" in
+  /*) script_path="$0" ;;
+  *) script_path="$PWD/$0" ;;
+  esac
 
-    out=$(mktemp)
-    gnome-terminal --wait -- "$script_path" "$out"
-    mode=$(sed -n 1p "$out")
-    url=$(sed -n 2p "$out")
-    rm -f "$out"
+  out=$(mktemp)
+  gnome-terminal --wait -- "$script_path" "$out"
+  mode=$(sed -n 1p "$out")
+  url=$(sed -n 2p "$out")
+  rm -f "$out"
 
-    [ -z "$url" ] && exit 0
-    if [ "$mode" = tab ]; then
-        exec firefox --new-tab "$url"
-    else
-        exec firefox --new-window "$url"
-    fi
+  [ -z "$url" ] && exit 0
+  if [ "$mode" = tab ]; then
+    exec firefox-new --new-tab "$url"
+  else
+    exec firefox-new --new-window "$url"
+  fi
 fi
 
 # Parse Firefox bookmarks: URL<TAB>title.
 pairs=""
 if [ -s "$bm" ]; then
-    pairs=$(
-        sed -n \
-            's/.*<A HREF="\([^"]*\)"[^>]*>\(.*\)<\/A>.*/\1\t\2/p' \
-            "$bm" |
-        sed 's/\&lt;/</g; s/\&gt;/>/g; s/\&quot;/"/g; s/\&amp;/\&/g'
-    )
+  pairs=$(
+    sed -n \
+      's/.*<A HREF="\([^"]*\)"[^>]*>\(.*\)<\/A>.*/\1\t\2/p' \
+      "$bm" |
+      sed 's/\&lt;/</g; s/\&gt;/>/g; s/\&quot;/"/g; s/\&amp;/\&/g'
+  )
 fi
 
 # Build the displayed bookmark list.
 menu=$(
-    printf '%s\n' "$pairs" |
-        awk -F '\t' 'NF >= 2 { print $2 " | " $1 }' |
-        sort -f
+  printf '%s\n' "$pairs" |
+    awk -F '\t' 'NF >= 2 { print $2 " | " $1 }' |
+    sort -f
 )
 
 # Enter = open highlighted bookmark, Ctrl-S = use exactly what I typed.
 # Output lines: 1) typed query  2) key pressed (empty for Enter)  3) selection
 res=$(
-    {
-        [ -n "$menu" ] && printf '%s\n' "$menu"
-    } |
+  {
+    [ -n "$menu" ] && printf '%s\n' "$menu"
+  } |
     fzf \
-        --prompt='Bookmark / URL / Search: ' \
-        --header='Enter: open bookmark | Ctrl-S: search or open typed text' \
-        --print-query \
-        --expect=ctrl-s
+      --prompt='Bookmark / URL / Search: ' \
+      --header='Enter: open bookmark | Ctrl-S: search or open typed text' \
+      --print-query \
+      --expect=ctrl-s
 )
 
 [ -z "$res" ] && exit 0
@@ -156,47 +156,47 @@ key=$(printf '%s\n' "$res" | sed -n 2p)
 sel=$(printf '%s\n' "$res" | sed -n 3p)
 
 if [ "$key" = ctrl-s ] || [ -z "$sel" ]; then
-    # Typed text: open it as a URL, or search for it.
-    mode=window
-    case "$query" in
-        '')
-            exit 0
-            ;;
-        http://*|https://*|file://*|about:*)
-            url=$query
-            ;;
-        *[[:space:]]*)
-            url=$(search_url "$query")
-            ;;
-        *.*)
-            url="https://$query"
-            ;;
-        *)
-            url=$(search_url "$query")
-            ;;
-    esac
+  # Typed text: open it as a URL, or search for it.
+  mode=window
+  case "$query" in
+  '')
+    exit 0
+    ;;
+  http://* | https://* | file://* | about:*)
+    url=$query
+    ;;
+  *[[:space:]]*)
+    url=$(search_url "$query")
+    ;;
+  *.*)
+    url="https://$query"
+    ;;
+  *)
+    url=$(search_url "$query")
+    ;;
+  esac
 else
-    # Highlighted bookmark: look up its URL.
-    mode=tab
-    url=$(
-        printf '%s\n' "$pairs" |
-            T="$sel" awk -F '\t' \
-                'NF >= 2 && ($2 " | " $1) == ENVIRON["T"] {
+  # Highlighted bookmark: look up its URL.
+  mode=tab
+  url=$(
+    printf '%s\n' "$pairs" |
+      T="$sel" awk -F '\t' \
+        'NF >= 2 && ($2 " | " $1) == ENVIRON["T"] {
                     print $1
                     exit
                 }'
-    )
+  )
 fi
 
 [ -z "$url" ] && exit 0
 
 # Hand the URL back to the launcher; if run by hand, open it directly.
 if [ -n "$1" ]; then
-    printf '%s\n%s' "$mode" "$url" > "$1"
+  printf '%s\n%s' "$mode" "$url" >"$1"
 else
-    if [ "$mode" = tab ]; then
-        firefox --new-tab "$url" >/dev/null 2>&1 &
-    else
-        firefox --new-tab "$url" >/dev/null 2>&1 &
-    fi
+  if [ "$mode" = tab ]; then
+    firefox-new --new-tab "$url" >/dev/null 2>&1 &
+  else
+    firefox-new --new-tab "$url" >/dev/null 2>&1 &
+  fi
 fi

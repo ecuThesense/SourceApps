@@ -2,7 +2,7 @@
 Name=Firefox-New
 GenericName=Firefox mainline
 Comment=Not ESR, mainline Firefox build
-Exec=/usr/local/bin/firefox-new %u
+Exec=/usr/local/bin/firefox-new
 TryExec=/usr/local/bin/firefox-new
 Terminal=false
 X-MultipleArgs=false

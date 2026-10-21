@@ -1,1 +1,1 @@
-~/apps/firefox/firefox-bin
+exec ~/apps/firefox/firefox-bin "$@"
