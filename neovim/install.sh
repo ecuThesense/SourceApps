@@ -1,6 +1,7 @@
-git clone https://github.com/neovim/neovim
-cd neovim
+git clone https://github.com/neovim/neovim ~/apps/
+cd ~/apps/neovim
 git checkout stable
 make CMAKE_BUILD_TYPE=Release
 doas make install
-cp -r ~/SourceApps/neovim/nvim/ ~/.config/
+exec ~/SourceApps/neovim/lazyvimdep.sh
+# cp -r ~/SourceApps/neovim/nvim/ ~/.config/

@@ -11,6 +11,9 @@ rm -rf ~/.config/alacritty/
 cp -r ~/SourceApps/alacritty/ ~/.config/
 fc-cache -fv
 cp -r ~/SourceApps/Templates/ ~/
+exec ~/SourceApps/gnome/keybindings-import.sh
+exec ~/SourceApps/neovim/install.sh
+
 # source ~/.bashrc
 # doas update-alternatives --config x-terminal-emulator
 # gsettings set org.gnome.desktop.default-applications.terminal exec '/usr/bin/gnome-terminal.wrapper'

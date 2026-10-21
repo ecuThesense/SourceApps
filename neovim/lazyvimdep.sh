@@ -1,11 +1,10 @@
 doas apt update && doas apt upgrade -y
 doas apt install ripgrep fd-find luarocks lazygit python3-pynvim
 
-doas rm -rf /usr/local/share/nvim /usr/local/lib/nvim
-cd ~/apps/neovim/
-doas make install
+# doas rm -rf /usr/local/share/nvim /usr/local/lib/nvim
+# cd ~/apps/neovim/
+# doas make install
 
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/AdwaitaMono.zip
 # Make a backup of your current Neovim files:
 # # required
 mv ~/.config/nvim{,.bak}
@@ -19,5 +18,5 @@ cp -r ~/SourceApps/neovim/nvim ~/.config/
 # Remove the .git folder, so you can add it to your own repo later
 # rm -rf ~/.config/nvim/.git
 # Start Neovim!
-nvim
+# nvim
 # It is recommended to run :LazyHealth after installation. This will load all plugins and check if everything is working correctly.
