@@ -315,6 +315,8 @@ alias update='doas apt update && doas apt upgrade -y && doas apt full-upgrade -y
 alias ll='ls -lha --color=auto'
 alias ls='ls --color=auto'
 
+alias git-push-all='git add . && git commit -m "fix" && git push'
+
 cmc() {
   "$HOME/SourceApps/gnome/command-run.sh" "$@"
 }
