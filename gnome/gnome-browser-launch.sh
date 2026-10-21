@@ -112,9 +112,9 @@ if [ ! -t 0 ] || [ ! -t 1 ]; then
 
   [ -z "$url" ] && exit 0
   if [ "$mode" = tab ]; then
-    exec firefox-new --new-tab "$url"
+    exec firefox --new-tab "$url"
   else
-    exec firefox-new --new-window "$url"
+    exec firefox --new-window "$url"
   fi
 fi
 
@@ -195,8 +195,8 @@ if [ -n "$1" ]; then
   printf '%s\n%s' "$mode" "$url" >"$1"
 else
   if [ "$mode" = tab ]; then
-    firefox-new --new-tab "$url" >/dev/null 2>&1 &
+    firefox --new-tab "$url" >/dev/null 2>&1 &
   else
-    firefox-new --new-tab "$url" >/dev/null 2>&1 &
+    firefox --new-tab "$url" >/dev/null 2>&1 &
   fi
 fi
