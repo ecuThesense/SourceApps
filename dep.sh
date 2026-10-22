@@ -1,4 +1,8 @@
-# apt install doas
+# su - && apt update && apt upgrade -y && apt install doas -y
+# vi /etc/doas.conf
+# permit persist username as root
+# chown root:root /etc/doas.conf
+# chmod 0400 /etc/doas.conf
 # apt purge sudo && apt autoremove -y
 doas apt update && doas apt upgrade -y && doas apt full-upgrade -y && doas apt autoremove -y
 doas apt install git fzf firefox-esr thunderbird gimp libreoffice timeshift htop imagemagick ffmpeg mat2 secrets celluloid foomatic-db cups cups-pk-helper curl wl-clipboard make clang cmake ninja-build rustup meson just tealdeer vrms wget manpages man-db laptop-detect golang-go gnupg gcc mc converseen
