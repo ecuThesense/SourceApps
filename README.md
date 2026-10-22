@@ -1,2 +1,2 @@
 # SourceApps
-personal dwm config
+personal desktop config
