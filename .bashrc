@@ -40,6 +40,12 @@ __gnome_accent_rgb() {
   esac
 }
 
+__pl_rgb_to_hex() {
+  local r g b
+  IFS=';' read -r r g b <<<"$1"
+  printf '#%02x%02x%02x' "$r" "$g" "$b"
+}
+
 __pl_update_palette() {
   local r g b
   read -r r g b <<<"$(__gnome_accent_rgb)"
@@ -77,6 +83,20 @@ __pl_update_palette() {
 
   # Keep the Git status foreground in sync with the lightest shade
   __PL_FG_C6="38;2;${__PL_C6}"
+
+  # Change only fzf's selected-row background
+  # local accent
+  # accent=$(__pl_rgb_to_hex "$__PL_C4")
+  #
+  # FZF_DEFAULT_OPTS="${__FZF_BASE_OPTS:+$__FZF_BASE_OPTS }--color=bg+:${accent}"
+  # export FZF_DEFAULT_OPTS
+
+  # Export the current GNOME accent for custom scripts
+  FZF_ACCENT=$(__pl_rgb_to_hex "$__PL_C4")
+  export FZF_ACCENT
+
+  FZF_DEFAULT_OPTS="${__FZF_BASE_OPTS:+$__FZF_BASE_OPTS }--color=bg+:${FZF_ACCENT}"
+  export FZF_DEFAULT_OPTS
 }
 
 # __apply_accent() {
@@ -315,6 +335,8 @@ alias update='doas apt update && doas apt upgrade -y && doas apt full-upgrade -y
 alias ll='ls -lha --color=auto'
 alias ls='ls --color=auto'
 alias bin-check='cd ~/.local/bin/'
+alias app-picker='~/SourceApps/gnome/app-picker.sh'
+alias file-picker='~/SourceApps/gnome/file-picker.sh'
 
 alias git-push-all='git add . && git commit -m "fix" && git push'
 
@@ -346,6 +368,12 @@ fi
 cd() {
   builtin cd "$@" && ls -a --color=auto
 }
+
+# Preserve existing fzf options before adding dynamic colors
+if [[ ! ${__FZF_BASE_OPTS+x} ]]; then
+  __FZF_BASE_OPTS=${FZF_DEFAULT_OPTS-}
+fi
+
 export EDITOR=nvim
 export VISUAL=nvim
 export NNN_OPENER=nvim
