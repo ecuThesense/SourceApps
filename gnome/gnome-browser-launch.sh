@@ -87,6 +87,24 @@
 
 bm="$HOME/bookmarks.html"
 
+# Read the current GNOME accent color independently of Bash
+accent_name=$(gsettings get org.gnome.desktop.interface accent-color 2>/dev/null |
+  tr -d "'")
+
+case "$accent_name" in
+teal) FZF_ACCENT='#2190a4' ;;
+green) FZF_ACCENT='#3a944a' ;;
+yellow) FZF_ACCENT='#c88800' ;;
+orange) FZF_ACCENT='#ed5b00' ;;
+red) FZF_ACCENT='#e62d42' ;;
+pink) FZF_ACCENT='#d56199' ;;
+purple) FZF_ACCENT='#9141ac' ;;
+slate) FZF_ACCENT='#6f8396' ;;
+*) FZF_ACCENT='#3584e4' ;;
+esac
+
+export FZF_ACCENT
+
 search_url() {
   q=$(printf '%s' "$1" |
     od -An -v -tx1 |
@@ -143,6 +161,7 @@ res=$(
     [ -n "$menu" ] && printf '%s\n' "$menu"
   } |
     fzf \
+      --color="bg+:${FZF_ACCENT:-#3584e4}" \
       --prompt='Bookmark / URL / Search: ' \
       --header='Enter: open bookmark | Ctrl-S: search or open typed text' \
       --print-query \
