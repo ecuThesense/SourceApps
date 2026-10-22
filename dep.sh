@@ -14,6 +14,8 @@ cp -r ~/SourceApps/Templates/ ~/
 exec ~/SourceApps/gnome/keybindings-import.sh
 exec ~/SourceApps/neovim/install.sh
 
+bin-import ~/apps/
+
 # source ~/.bashrc
 # doas update-alternatives --config x-terminal-emulator
 # gsettings set org.gnome.desktop.default-applications.terminal exec '/usr/bin/gnome-terminal.wrapper'
