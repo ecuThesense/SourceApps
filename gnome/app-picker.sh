@@ -5,7 +5,7 @@ out=$(
     sort -u |
     fzf \
       --style=full \
-      --expect=alt-enter \
+      --expect=ctrl-o \
       --preview 'if [ "$(file -b --mime-encoding {})" = binary ]; then file -b {}; else cat {}; fi' \
       --bind 'focus:transform-header:file --brief {}'
 )
@@ -15,8 +15,9 @@ file=$(sed -n 2p <<<"$out")
 
 [ -n "$file" ] || exit 0
 
-if [ "$key" = alt-enter ]; then
-  exec "$file" # CLI/TUI: takes over this terminal
+if [ "$key" = ctrl-s ]; then
+  "$file" # TUI: runs in this terminal (nvim, htop, ...)
+  # exec "$SHELL" # uncomment to keep the terminal open as a shell afterwards
 else
   setsid -f "$file" >/dev/null 2>&1 # GUI: detached, terminal can close
 fi
