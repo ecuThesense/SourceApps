@@ -1,5 +1,5 @@
 # In case if you used gtk3 or something like that and want to switch to original gnome
-dconf dump / > ~/dconf-backup.ini
+dconf dump / >~/dconf-backup.ini
 # dconf load / < ~/dconf-backup.ini
 dconf reset -f /org/gnome/desktop/interface/
 dconf reset -f /org/gnome/desktop/wm/preferences/
@@ -15,7 +15,7 @@ mv ~/.config/gtk-3.0/settings.ini ~/.config/gtk-3.0/gtk.css ~/appearance-old/ 2>
 mv ~/.config/gtk-4.0/settings.ini ~/.config/gtk-4.0/gtk.css ~/appearance-old/ 2>/dev/null
 # env | grep -E 'GTK_THEME|QT_QPA|QT_STYLE|XCURSOR|GDK_'
 #for i in $(seq 1 9); do
-  gsettings set org.gnome.shell.keybindings switch-to-application-$i "[]"
-  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
-  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Shift>$i']"
-done
+#  gsettings set org.gnome.shell.keybindings switch-to-application-$i "[]"
+#  gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-$i "['<Super>$i']"
+#  gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-$i "['<Super><Shift>$i']"
+#done
