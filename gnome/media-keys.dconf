@@ -37,7 +37,7 @@ name='Passwords'
 
 [custom-keybindings/custom3]
 binding='Print'
-command='bash -c "$HOME/apps/Gradia.AppImage --screenshot=INTERACTIVE"'
+command='gradia --screenshot=INTERACTIVE'
 name='Gradia'
 
 [custom-keybindings/custom4]
