@@ -340,8 +340,17 @@ alias file-picker='~/SourceApps/gnome/file-picker.sh'
 
 alias git-push-all='git add . && git commit -m "fix" && git push'
 
+# bin-import() {
+#   find "$(realpath "${1:-.}")" -maxdepth 1 -type f -executable -exec sh -c 'for f; do n=${f##*/}; ln -sfnv "$f" ~/.local/bin/"${n%.[A-Za-z]*}"; done' _ {} +
+# }
+
 bin-import() {
-  find "$(realpath "${1:-.}")" -maxdepth 1 -type f -executable -exec sh -c 'for f; do n=${f##*/}; ln -sfnv "$f" ~/.local/bin/"${n%.[A-Za-z]*}"; done' _ {} +
+  find "$(realpath "${1:-.}")" -maxdepth 1 -type f -executable -exec sh -c '
+    for f; do
+      n=${f##*/}
+      mv -fv "$f" ~/.local/bin/"${n%.[A-Za-z]*}"
+    done
+  ' _ {} +
 }
 
 cmc() {
