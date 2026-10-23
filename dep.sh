@@ -11,8 +11,8 @@ doas apt install ripgrep fd-find luarocks lazygit python3-pynvim
 
 cp ~/SourceApps/.bashrc ~/.bashrc
 cp -r ~/SourceApps/AdwaitaMono/ ~/.local/share/fonts/
-rm -rf ~/.config/alacritty/
-cp -r ~/SourceApps/alacritty/ ~/.config/
+#rm -rf ~/.config/alacritty/
+#cp -r ~/SourceApps/alacritty/ ~/.config/
 fc-cache -fv
 cp -r ~/SourceApps/Templates/ ~/
 exec ~/SourceApps/gnome/keybindings-import.sh
@@ -20,7 +20,6 @@ exec ~/SourceApps/neovim/install.sh
 doas exec ~/SourceApps/Vimix-Grub/install.sh
 
 mkdir -p ~/apps/
-
 curl -LO ~/apps/ https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
 curl -LO ~/apps/ https://github.com/pkgforge-dev/PDF-Tricks-AppImage/releases/download/0.4.1-2%402026-10-22_1792689058/PDF_Tricks-0.4.1-2-anylinux-x86_64.AppImage
 curl -LO ~/apps/ https://github.com/pkgforge-dev/Eyedropper-AppImage/releases/download/2.2.1-1%402026-10-22_1792689101/Eyedropper-2.2.1-1-anylinux-x86_64.AppImage
@@ -31,7 +30,7 @@ curl -LO ~/apps/ https://github.com/localsend/localsend/releases/download/v1.18.
 curl -LO ~/apps/ https://github.com/pkgforge-dev/NewsFlash-AppImage/releases/download/5.2.3-1%402026-10-22_1792688923/Newsflash-5.2.5-1-anylinux-x86_64.AppImage
 curl -LO ~/apps/ https://github.com/storytold/pdfcraft/releases/download/v0.13.0/pdfcraft-0.13.0-linux-x86_64.AppImage
 curl -LO ~/apps/ https://github.com/pkgforge-dev/PDF-Tricks-AppImage/releases/download/0.4.1-2%402026-10-22_1792689058/PDF_Tricks-0.4.1-2-anylinux-x86_64.AppImage
-
+chmod u+x *
 bin-import ~/apps/
 
 # source ~/.bashrc
