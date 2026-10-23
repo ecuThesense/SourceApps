@@ -17,6 +17,7 @@ fc-cache -fv
 cp -r ~/SourceApps/Templates/ ~/
 exec ~/SourceApps/gnome/keybindings-import.sh
 exec ~/SourceApps/neovim/install.sh
+doas exec ~/SourceApps/Vimix-Grub/install.sh
 
 bin-import ~/apps/
 
