@@ -337,6 +337,7 @@ alias ls='ls --color=auto'
 alias bin-check='cd ~/.local/bin/'
 alias app-picker='~/SourceApps/gnome/app-picker.sh'
 alias file-picker='~/SourceApps/gnome/file-picker.sh'
+alias wttr='curl wttr.in/Berlin'
 
 alias git-push-all='git add . && git commit -m "fix" && git push'
 
