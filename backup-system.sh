@@ -1,4 +1,5 @@
 cp -r ~/.bashrc ~/SourceApps/
+cp -r ~/Templates/ ~/SourceApps/
 exec ~/SourceApps/neovim/backup.sh
 exec ~/SourceApps/gnome/keybindings-export.sh
 
