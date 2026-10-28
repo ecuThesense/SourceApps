@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+
+import os
+import subprocess
+import uuid
+
+from gi.repository import Gio, GLib
+
+MODEL = "gemma4-e4b-uncensored"
+
+bus = Gio.bus_get_sync(Gio.BusType.SESSION, None)
+loop = GLib.MainLoop()
+result = {}
+
+def on_response(
+    connection, sender, path, interface, signal, parameters, data
+):
+    code, values = parameters.unpack()
+
+    if code == 0:
+        result["uri"] = values.get("uri")
+    else:
+        result["error"] = code
+
+    loop.quit()
+
+token = "ask_screen_" + uuid.uuid4().hex
+
+options = {
+    "handle_token": GLib.Variant("s", token),
+    "interactive": GLib.Variant("b", True),
+    "target": GLib.Variant("u", 4),
+}
+
+reply = bus.call_sync(
+    "org.freedesktop.portal.Desktop",
+    "/org/freedesktop/portal/desktop",
+    "org.freedesktop.portal.Screenshot",
+    "Screenshot",
+    GLib.Variant("(sa{sv})", ("wayland:", options)),
+    GLib.VariantType.new("(o)"),
+    Gio.DBusCallFlags.NONE,
+    -1,
+    None,
+)
+
+request_path = reply.unpack()[0]
+
+subscription = bus.signal_subscribe(
+    "org.freedesktop.portal.Desktop",
+    "org.freedesktop.portal.Request",
+    "Response",
+    request_path,
+    None,
+    Gio.DBusSignalFlags.NONE,
+    on_response,
+    None,
+)
+
+loop.run()
+bus.signal_unsubscribe(subscription)
+
+if "uri" not in result:
+    raise SystemExit(
+        f"Скриншот отменён или не создан: {result.get('error')}"
+    )
+
+image_path = Gio.File.new_for_uri(result["uri"]).get_path()
+
+if not image_path or not os.path.isfile(image_path):
+    raise SystemExit("Не удалось найти файл скриншота.")
+
+subprocess.run([
+    "ollama", "run", MODEL,
+    f"Что изображено на этом скриншоте? {image_path}"
+], check=True)
