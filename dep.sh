@@ -28,7 +28,7 @@ curl -L -o ~/.local/bin/gradia https://github.com/pkgforge-dev/Gradia-AppImage/r
 curl -L -o ~/.local/bin/impression https://github.com/pkgforge-dev/Impression-AppImage/releases/download/3.8.0-1%402026-10-22_1792689451/Impression-3.8.0-1-anylinux-x86_64.AppImage
 curl -L -o ~/.local/bin/localsend https://github.com/localsend/localsend/releases/download/v1.18.2/LocalSend-1.18.2-linux-x86-64.AppImage
 curl -L -o ~/.local/bin/newsflash https://github.com/pkgforge-dev/NewsFlash-AppImage/releases/download/5.2.3-1%402026-10-22_1792688923/Newsflash-5.2.5-1-anylinux-x86_64.AppImage
-curl -L -o ~/.local/bin/pdfcraft https://github.com/storytold/pdfcraft/releases/download/v0.13.0/pdfcraft-0.13.0-linux-x86_64.AppImage
+curl -L -o ~/.local/bin/pdfcraft https://github.com/storytold/pdfcraft/releases/download/v0.14.0/pdfcraft-0.14.0-linux-x86_64.AppImage
 curl -L -o ~/.local/bin/libreoffice-full https://appimages.libreitalia.org/LibreOffice-latest.full-x86_64.AppImage
 
 chmod u+x *
